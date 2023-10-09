@@ -6,7 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Poppins:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="https://biomedicatest.uniandes.edu.co/sites/default/files/favicon_0.ico" type="image/x-icon">
+    <title>Servicios de biocompatibilidad | Uniandes</title>
     <style>
 
         body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
@@ -20,6 +21,11 @@
 
         body{
             font-family: 'Montserrat', sans-serif !important;
+        }
+
+        *{
+            text-decoration: none;
+            list-style: none;
         }
         
         .serviciodebiocompatibilidad-inicio-seccion1{
@@ -206,6 +212,7 @@
             background-color: #FF5A62;
             padding: 1rem;
             border-radius: 50%;
+            position: absolute;
             
         }
 
@@ -341,138 +348,263 @@
 
         }
 
+        nav{
+            font-size: 1px;
+            background: white;
+            position: fixed;
+            height: auto;
+            width: 100%;
+            padding: .2rem 0 .5rem 0;
+            z-index: 1;
+        }
+        .enlace{
+            position: absolute;
+            padding: 1rem 5rem;
+        }
+        .logo{
+            height: 80px;
+        }
+        nav ul{
+            float: right;
+            margin-right: 5rem;
+            margin-top: 1rem;
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a{
+            color: black;
+            font-size: 18px;
+            padding: 7px 13px;
+            transition: all 0.1s;
+            border-bottom: 0px solid black;
+            font-weight: bold;
+        }
+        li a.active, li a:hover{
+            color: #00A59D;
+            border-bottom: 4px solid black;
+        }
+        .checkbtn{
+            color: #fff;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        section{
+            padding-top: 7.5rem;
+        }
+
+        .barras{
+            width: auto;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 952px){
+            .enlace{
+                padding-left: 20px;
+            }
+        }
+
+        @media (max-width: 858px){
+            .checkbtn{
+                margin-top: 2rem;
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: white;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav{
+                padding: 0;
+            }
+
+            nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a{
+                color: black;
+            }
+
+            li a:hover, li a.active{
+                background: none;
+            }
+            #check:checked ~ ul{
+                left:0;
+            }
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="serviciodebiocompatibilidad-inicio-seccion1">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"><img class="barras" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/bars-solid.svg?_t=1696429006" alt=""></i>
+        </label>
 
-        <div class="serviciodebiocompatibilidad-inicio-seccion1-izquierda">
-            <img class="serviciodebiocompatibilidad-inicio-seccion1-izquierda-imagen" alt="imagen de laboratorio" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/imagen-banner-1.jpg?_t=1696286505"/>
-        </div>
-
-        <div class="serviciodebiocompatibilidad-inicio-seccion1-derecha">
-            <img class="serviciodebiocompatibilidad-inicio-seccion1-derecha-logo" alt="logo de uniandes y onac" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/logo%20onac.png?_t=1696288291"/>
-            <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion1-derecha-texto-1">LABORATORIO DE  <br> INGENIERÍA BIOMÉDICA</h1><br>
-            <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion1-derecha-texto-2">SERVICIOS DE <br> BIOCOMPATIBILIDAD</h1>
-        </div>
-
-    </div>
-
-    <div class="serviciodebiocompatibilidad-inicio-seccion2">
-
-        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1">
-            Conectando Ciencia y Salud: Biocompatibilidad in vitro
-        </p>
-
-        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2" id="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
-            Somos pioneros en Colombia en ensayos de biocompatibilidad in vitro, apoyamos el desarrollo de soluciones médicas locales y globales.
-        </p>
-
-        <a href="#" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-boton">
-            Solicite cotización
+        <a href="https://ingbiomedica.uniandes.edu.co/es/" class="enlace">
+            <img class="logo" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/LOGO-IBIO-negro.png?_t=1696427168" alt="logo ing biomedica">
         </a>
 
-        <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion1-derecha-texto-1">PROCESO DEL ENSAYO</h1>
+        <ul>
+            <li><a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/inicio">Inicio</a></li>
+            <li><a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/ensayos">Ensayos</a></li>
+            <li><a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/nosotros">Nosotros</a></li>
+            <li><a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
-        <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso">
+    <section>
 
-            <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1">
-                <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1-imagen-contenedor">
-                    <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1-imagen-contenedor-imagen"></div>
-                </div>
-                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1"><br>Paso 1. Diligenciar el formato</p>
-                <br>
-                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
-                    Llenar el formato de solicitud de servicio
-                </p>
+        <div class="serviciodebiocompatibilidad-inicio-seccion1">
+
+            <div class="serviciodebiocompatibilidad-inicio-seccion1-izquierda">
+                <img class="serviciodebiocompatibilidad-inicio-seccion1-izquierda-imagen" alt="imagen de laboratorio" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/imagen-banner-1.jpg?_t=1696286505"/>
             </div>
 
-            <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1">
-                <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-2-imagen-contenedor">
-                    <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-2-imagen-contenedor-imagen"></div>
-                </div>
-                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1"><br>Paso 2. Revisión y respuesta</p>
-                <br>
-                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
-                    El laboratorio revisa y autoriza el servicio
-                </p>
-            </div>
-
-            <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1">
-                <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-3-imagen-contenedor">
-                    <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-3-imagen-contenedor-imagen"></div>
-                </div>
-                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1"><br>Paso 3. Envío de la muestra </p>
-                <br>
-                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
-                    La respuesta se envia
-                </p>
-            </div>
-
-            <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1">
-                <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-4-imagen-contenedor">
-                    <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-4-imagen-contenedor-imagen"></div>
-                </div>
-                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1"><br>Paso 4. Inicio del ensayo</p>
-                <br>
-                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
-                    El laboratorio revisa y autoriza el servicio
-                </p>
-            </div>
-
-            <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1">
-                <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-5-imagen-contenedor">
-                    <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-5-imagen-contenedor-imagen"></div>
-                </div>
-                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1"><br>Paso 5. Expedición de resultados </p>
-                <br>
-                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
-                    15 días hábiles
-                </p>
+            <div class="serviciodebiocompatibilidad-inicio-seccion1-derecha">
+                <img class="serviciodebiocompatibilidad-inicio-seccion1-derecha-logo" alt="logo de uniandes y onac" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/logo%20onac.png?_t=1696288291"/>
+                <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion1-derecha-texto-1">LABORATORIO DE  <br> INGENIERÍA BIOMÉDICA</h1><br>
+                <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion1-derecha-texto-2">SERVICIOS DE <br> BIOCOMPATIBILIDAD</h1>
             </div>
 
         </div>
 
-    </div>  
+        <div class="serviciodebiocompatibilidad-inicio-seccion2">
 
-    <div class="serviciodebiocompatibilidad-inicio-seccion3">
-
-        <div class="serviciodebiocompatibilidad-inicio-seccion3-izquierda">
-            <div class="serviciodebiocompatibilidad-inicio-seccion3-izquierda-video">
-                <iframe width="600px" height="350px" src="https://www.youtube.com/embed/QA0HG1jkty4" title="Servicios de Compatibilidad - Ingeniería Biomédica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>        
-        </div>
-
-        <div class="serviciodebiocompatibilidad-inicio-seccion3-derecha">
-            <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion1-derecha-texto-1">Nuestro Laboratorio</h1>
-            <br>
-            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">El laboratorio de Ingeniería Biomédica de la 
-                Facultad de Ingeniería de la Universidad de los 
-                Andes, cuenta con el ensayo de citotoxicidad in 
-                vitro para dispositivos médicos, fármacos y aceites esenciales acreditado para ISO/IEC 
-                17025:2017
+            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1">
+                Conectando Ciencia y Salud: Biocompatibilidad in vitro
             </p>
-        </div>
 
-    </div> 
-    
-    <div class="serviciodebiocompatibilidad-inicio-seccion4">
+            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2" id="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
+                Somos pioneros en Colombia en ensayos de biocompatibilidad in vitro, apoyamos el desarrollo de soluciones médicas locales y globales.
+            </p>
 
-        <img class="serviciodebiocompatibilidad-inicio-seccion4-imagen" alt="logo de acreditacion" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/logo%20onac.png?_t=1696288291"/>
-        <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion1-derecha-texto-1">Acreditado ISO/IEC 17025:2017</h1>
-        <br>
-        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">Estandar mundial para la competencia del <br>
-            laboratorio, requiere la calificación de <br> laboratorios profesionales.
-        </p>
-        <a href="#" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion3-boton">
-            Mira aquí la acreditación
-        </a>
+            <a href="https://forms.office.com/r/E28Qb4suKG" target="_blank" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-boton">
+                Solicite cotización
+            </a>
 
-    </div> 
+            <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion1-derecha-texto-1">PROCESO DEL ENSAYO</h1>
 
-    <div class="serviciodebiocompatibilidad-footer">
-    </div> 
+            <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso">
+
+                <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1">
+                    <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1-imagen-contenedor">
+                        <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1-imagen-contenedor-imagen"></div>
+                    </div>
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1"><br>Paso 1. Diligenciar el formato</p>
+                    <br>
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
+                        Llenar el formato de solicitud de servicio
+                    </p>
+                </div>
+
+                <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1">
+                    <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-2-imagen-contenedor">
+                        <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-2-imagen-contenedor-imagen"></div>
+                    </div>
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1"><br>Paso 2. Revisión y respuesta</p>
+                    <br>
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
+                        El laboratorio revisa y autoriza el servicio
+                    </p>
+                </div>
+
+                <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1">
+                    <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-3-imagen-contenedor">
+                        <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-3-imagen-contenedor-imagen"></div>
+                    </div>
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1"><br>Paso 3. Envío de la muestra </p>
+                    <br>
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
+                        La respuesta se envia
+                    </p>
+                </div>
+
+                <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1">
+                    <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-4-imagen-contenedor">
+                        <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-4-imagen-contenedor-imagen"></div>
+                    </div>
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1"><br>Paso 4. Inicio del ensayo</p>
+                    <br>
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
+                        El laboratorio revisa y autoriza el servicio
+                    </p>
+                </div>
+
+                <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-1">
+                    <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-5-imagen-contenedor">
+                        <div class="serviciodebiocompatibilidad-inicio-seccion2-proceso-5-imagen-contenedor-imagen"></div>
+                    </div>
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-1"><br>Paso 5. Expedición de resultados </p>
+                    <br>
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
+                        15 días hábiles
+                    </p>
+                </div>
+
+            </div>
+
+        </div>  
+
+        <div class="serviciodebiocompatibilidad-inicio-seccion3">
+
+            <div class="serviciodebiocompatibilidad-inicio-seccion3-izquierda">
+                <div class="serviciodebiocompatibilidad-inicio-seccion3-izquierda-video">
+                    <iframe width="600px" height="350px" src="https://www.youtube.com/embed/QA0HG1jkty4" title="Servicios de Compatibilidad - Ingeniería Biomédica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>        
+            </div>
+
+            <div class="serviciodebiocompatibilidad-inicio-seccion3-derecha">
+                <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion1-derecha-texto-1">Nuestro Laboratorio</h1>
+                <br>
+                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">El laboratorio de Ingeniería Biomédica de la 
+                    Facultad de Ingeniería de la Universidad de los 
+                    Andes, cuenta con el ensayo de citotoxicidad in 
+                    vitro para dispositivos médicos, fármacos y aceites esenciales acreditado para ISO/IEC 
+                    17025:2017
+                </p>
+            </div>
+
+        </div> 
+        
+        <div class="serviciodebiocompatibilidad-inicio-seccion4">
+
+            <img class="serviciodebiocompatibilidad-inicio-seccion4-imagen" alt="logo de acreditacion" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/logo%20onac.png?_t=1696288291"/>
+            <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion1-derecha-texto-1">Acreditado ISO/IEC 17025:2017</h1>
+            <br>
+            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">Estandar mundial para la competencia del <br>
+                laboratorio, requiere la calificación de <br> laboratorios profesionales.
+            </p>
+            <a href="#" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion3-boton">
+                Mira aquí la acreditación
+            </a>
+
+        </div> 
+
+        <div class="serviciodebiocompatibilidad-footer">
+        </div> 
+
+    </section>
 
 </body>
 </html>
