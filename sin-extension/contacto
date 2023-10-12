@@ -39,8 +39,8 @@
                 display: flex;
                 justify-content: end;
                 align-items: center;
-                background-image: url('https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/imagen-banner-4-contacto.jpg?_t=1696302312');
-                background-size: cover;
+                background-image: url('https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/imagen-banner-4-contacto.jpg?_t=1697066511');
+                background-size: 110%;
                 background-position: center;
                 background-repeat: no-repeat;
                 width: 100%;
@@ -59,7 +59,7 @@
             background-position: center;
             justify-content: center;
             align-items: center;
-            padding: 3rem 5rem 5rem 5rem;
+            padding: 3rem 15% 5rem 15%;
             display: flex;
             gap: 5rem;
             box-sizing: border-box;
@@ -78,7 +78,7 @@
         }
 
         .serviciodebiocompatibilidad-contacto-seccion2-izquierda:first-child{
-            padding-top: 75px;
+            padding-top: 140px;
             box-sizing: border-box;
         }
 
@@ -186,13 +186,13 @@
         }
 
         .serviciodebiocompatibilidad-contacto-seccion2-informacion-izquierda{
-            width: 80px;
-            height: 80px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             background-color: #FF5A62;
             border-radius: 50%;
-            padding: 30px;
+            padding: 20px;
             filter: invert(1);
         }
 
@@ -223,7 +223,7 @@
             display: flex;
             background-color: #00A59D;
             box-sizing: border-box;
-            padding: 5rem;
+            padding: 2rem;
         }
 
         .serviciodebiocompatibilidad-footer-columna1{
@@ -309,6 +309,27 @@
             background-color: rgba(255, 255, 255, 0.774);
         } 
 
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: white;
+            padding: 22px 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whatsapp-icon img {
+            width: 120px;
+            transition: all .3s;
+        }
+
+        .whatsapp-icon:hover img{
+            width: 125px;
+        }
+
     </style>
 
 </head>
@@ -334,6 +355,12 @@
 
     <section>
 
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/TUNUMERO?text=Hola%20desde%20mi%20sitio%20web" target="_blank">
+                <img src="https://logos-world.net/wp-content/uploads/2020/05/Logo-WhatsApp.png" alt="WhatsApp">
+            </a>
+        </div>
+
         <div class="serviciodebiocompatibilidad-contacto-seccion1">
             <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-contacto-seccion1-banner-texto">Contacto</p>
         </div>
@@ -350,9 +377,7 @@
                         <b>Teléfono</b>
                         <br>
                         <br>
-                        +(601) 339 49 49 
-                        <br>
-                        ext 1825, ext 3432
+                        +(601) 339 49 49 ext 3432
                     </div>
                     
                 </div>
@@ -392,7 +417,9 @@
                         <br>
                         Universidad de los Andes
                         <br>
-                        Cra 1 E #19a-70, Bogotá
+                        Cra 1 E #19a-40
+                        <br>
+                        Edificio Mario Laserna Bogotá
                     </div>
                     
                 </div>

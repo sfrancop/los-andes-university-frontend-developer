@@ -66,7 +66,7 @@
         .serviciodebiocompatibilidad-nosotros-seccion2-boton{
             background-color: #00A59D;
             width: fit-content;
-            padding: 1.5rem;
+            padding: 1rem;
             display: inline-block;
             color: white;
             font-weight: bold;
@@ -106,6 +106,7 @@
         .serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona > img{
             width: 15rem;
             margin-bottom: 1rem;
+            cursor: pointer;
         }
 
         .serviciodebiocompatibilidad-nosotros-seccion2-equipo-1{
@@ -123,6 +124,7 @@
 
         #texto-1{
             text-align: center;
+            margin-bottom: 5rem;
         }
 
         .serviciodebiocompatibilidad-nosotros-seccion3{
@@ -265,7 +267,7 @@
             display: flex;
             background-color: #00A59D;
             box-sizing: border-box;
-            padding: 5rem;
+            padding: 2rem;
         }
 
         .serviciodebiocompatibilidad-footer-columna1{
@@ -351,6 +353,222 @@
             background-color: rgba(255, 255, 255, 0.774);
         }
 
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacioncarolina-contenedor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            z-index: 2; 
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacioncarolina-contenedor-informacion {
+            background-color: white;
+            text-align: center;
+            color: black;
+            padding: 5rem 5rem 0 5rem;
+            width: 80%;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacioncarolina-contenedor-informacion-foto{
+            width: 20rem;
+            margin-bottom: 2rem;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacioncarolina-contenedor-informacion-label{
+            cursor: pointer;
+        }
+
+        #informacion-carolina{
+            display: none;
+        }
+
+        #informacion-carolina:checked ~ .serviciodebiocompatibilidad-nosotros-seccion2-informacioncarolina-contenedor{
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionmabel-contenedor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            z-index: 2; 
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionmabel-contenedor-informacion {
+            background-color: white;
+            text-align: center;
+            color: black;
+            padding: 5rem 5rem 0 5rem;
+            width: 80%;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionmabel-contenedor-informacion-foto{
+            width: 20rem;
+            margin-bottom: 2rem;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionmabel-contenedor-informacion-label{
+            cursor: pointer;
+        }
+
+        #informacion-mabel{
+            display: none;
+        }
+
+        #informacion-mabel:checked ~ .serviciodebiocompatibilidad-nosotros-seccion2-informacionmabel-contenedor{
+            display: flex;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionzyda-contenedor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            z-index: 2; 
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionzyda-contenedor-informacion {
+            background-color: white;
+            text-align: center;
+            color: black;
+            padding: 5rem 5rem 0 5rem;
+            width: 80%;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionzyda-contenedor-informacion-foto{
+            width: 20rem;
+            margin-bottom: 2rem;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionzyda-contenedor-informacion-label{
+            cursor: pointer;
+        }
+
+        #informacion-zyda{
+            display: none;
+        }
+
+        #informacion-zyda:checked ~ .serviciodebiocompatibilidad-nosotros-seccion2-informacionzyda-contenedor{
+            display: flex;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionyulis-contenedor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            z-index: 2; 
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionyulis-contenedor-informacion {
+            background-color: white;
+            text-align: center;
+            color: black;
+            padding: 5rem 5rem 0 5rem;
+            width: 80%;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionyulis-contenedor-informacion-foto{
+            width: 20rem;
+            margin-bottom: 2rem;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionyulis-contenedor-informacion-label{
+            cursor: pointer;
+        }
+
+        #informacion-yulis{
+            display: none;
+        }
+
+        #informacion-yulis:checked ~ .serviciodebiocompatibilidad-nosotros-seccion2-informacionyulis-contenedor{
+            display: flex;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionvalentina-contenedor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            z-index: 2; 
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionvalentina-contenedor-informacion {
+            background-color: white;
+            text-align: center;
+            color: black;
+            padding: 5rem 5rem 0 5rem;
+            width: 80%;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionvalentina-contenedor-informacion-foto{
+            width: 20rem;
+            margin-bottom: 2rem;
+        }
+
+        .serviciodebiocompatibilidad-nosotros-seccion2-informacionvalentina-contenedor-informacion-label{
+            cursor: pointer;
+        }
+
+        #informacion-valentina{
+            display: none;
+        }
+
+        #informacion-valentina:checked ~ .serviciodebiocompatibilidad-nosotros-seccion2-informacionvalentina-contenedor{
+            display: flex;
+        }
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: white;
+            padding: 22px 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whatsapp-icon img {
+            width: 120px;
+            transition: all .3s;
+        }
+
+        .whatsapp-icon:hover img{
+            width: 125px;
+        }
+
     </style>
 
 </head>
@@ -376,63 +594,180 @@
 
     <section>
 
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/TUNUMERO?text=Hola%20desde%20mi%20sitio%20web" target="_blank">
+                <img src="https://logos-world.net/wp-content/uploads/2020/05/Logo-WhatsApp.png" alt="WhatsApp">
+            </a>
+        </div>
+
         <div class="serviciodebiocompatibilidad-nosotros-seccion1">
             <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion1-banner-texto">Nosotros</p>
         </div>
 
         <div class="serviciodebiocompatibilidad-nosotros-seccion2">
-            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto" id="texto-1">Somos un laboratorio del Departamento de Ingeniería Biomédica de la Universidad de los Andes, <b style="font-family: 'Montserrat', sans-serif">la sexta mejor universidad de la región y número 
-                uno en Colombia.</b> Según la decimotercera edición del ranking QS con enfoque en América Latina y el Caribe 2024.
+            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto" id="texto-1">El Laboratorio de Ingeniería Celular y Bioimpresión, perteneciente al Departamento de Ingeniería Biomédica, tiene la responsabilidad de realizar pruebas de biocompatibilidad, tales como ensayos de citotoxicidad, hemólisis y agregación plaquetaria. Además, nuestro Departamento cuenta con una infraestructura que integra laboratorios de investigación y docencia, así como una amplia gama de equipos, incluyendo impresoras 3D, que están disponibles para prestar servicios tanto a nivel interno como externo.
             </p>
-
-            <a href="#" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-boton">
-                Conoce más aquí
-            </a>
             
             <h1 style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-titulo">NUESTRO EQUIPO</h1>
 
             <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-1">
 
-                <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona">
-                    <img alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/carolina-munoz.png?_t=1696994314">
-                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
-                        <b style="font-family: 'Montserrat', sans-serif">Carolina Muñoz</b> <br> Profesora Asociada <br> y Lider técnico
-                    </p>
-                </div>
+                <label for="informacion-carolina">
+                    <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona">
+                        <img alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/carolina-munoz.png?_t=1696994314">
+                        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
+                            <b style="font-family: 'Montserrat', sans-serif">Carolina Muñoz</b> <br> Profesora Asociada <br> y Lider técnico
+                        </p>
+                    </div>
+                </label>
 
-                <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona">
-                    <img alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/mabel-cruz.png?_t=1696994314">
-                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
-                        <b style="font-family: 'Montserrat', sans-serif">Mabel Cruz</b> <br> Coordinadora de <br> Laboratorioro
-                    </p>
-                </div>
+                <label for="informacion-mabel">
+                    <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona">
+                        <img alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/mabel-cruz.png?_t=1696994314">
+                        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
+                            <b style="font-family: 'Montserrat', sans-serif">Mabel Cruz</b> <br> Coordinadora de <br> Laboratorioro
+                        </p>
+                    </div>
+                </label>
 
-                <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona">
-                    <img alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/zayda-buitrago.png?_t=1696994318">
-                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
-                        <b style="font-family: 'Montserrat', sans-serif">Zayda Buitrag</b> <br> Gestora de Calidad
-                    </p>
-                </div>
+                <label for="informacion-zyda">
+                    <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona">
+                        <img alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/zayda-buitrago.png?_t=1696994318">
+                        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
+                            <b style="font-family: 'Montserrat', sans-serif">Zayda Buitrago</b> <br> Gestora de Calidad
+                        </p>
+                    </div>
+                </label>
 
             </div>
 
             <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-2">
 
-                <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona">
-                    <img alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/yulis-alarcon.png?_t=1696994318">
-                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
-                        <b style="font-family: 'Montserrat', sans-serif">Yulis Alarcón</b> <br> Técnico de Laboratorio
-                    </p>
-                </div>
+                <label for="informacion-yulis">
+                    <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona">
+                        <img alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/yulis-alarcon.png?_t=1696994318">
+                        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
+                            <b style="font-family: 'Montserrat', sans-serif">Yulis Alarcón</b> <br> Técnico de Laboratorio
+                        </p>
+                    </div>
+                </label>
 
-                <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona">
-                    <img alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/valentina-jaramillo.png?_t=1696994314">
-                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
-                        <b style="font-family: 'Montserrat', sans-serif">Valentina Jaramillo</b> <br> Asistente graduada
-                    </p>
-                </div>
+                <label for="informacion-valentina">
+                    <div class="serviciodebiocompatibilidad-nosotros-seccion2-equipo-persona">
+                        <img alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/valentina-jaramillo.png?_t=1696994314">
+                        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
+                            <b style="font-family: 'Montserrat', sans-serif">Valentina Jaramillo</b> <br> Asistente graduada
+                        </p>
+                    </div>
+                </label>
 
             </div>
+
+            <input type="checkbox" id="informacion-carolina">
+            <div class="serviciodebiocompatibilidad-nosotros-seccion2-informacioncarolina-contenedor">
+                <div class="serviciodebiocompatibilidad-nosotros-seccion2-informacioncarolina-contenedor-informacion">
+                    <img class="serviciodebiocompatibilidad-nosotros-seccion2-informacioncarolina-contenedor-informacion-foto" alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/carolina-munoz.png?_t=1696994314">
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
+                        <b>
+                            Carolina Muñoz
+                            <br>
+                            Profesora Asociada y Lider técnico
+                            <br>
+                            <br>
+                        </b>
+                        Responsable de coordinar, asignar, controlar, revisar y evaluar los ensayos y operaciones técnicas del laboratorio de apoyo de ingeniería biomédica, cumpliendo con el sistema de gestión de calidad bajo la norma ISO/IEC 17025 y lineamientos del departamento y la universidad, para satisfacer los requisitos y necesidades de los clientes internos y externos.
+                        <br>
+                        <label for="informacion-carolina" class="serviciodebiocompatibilidad-nosotros-seccion2-boton serviciodebiocompatibilidad-nosotros-seccion2-informacioncarolina-contenedor-informacion-label"> 
+                            Atrás
+                        </label>
+                    </p>
+                </div>
+            </div>
+
+            <input type="checkbox" id="informacion-mabel">
+            <div class="serviciodebiocompatibilidad-nosotros-seccion2-informacionmabel-contenedor">
+                <div class="serviciodebiocompatibilidad-nosotros-seccion2-informacionmabel-contenedor-informacion">
+                    <img class="serviciodebiocompatibilidad-nosotros-seccion2-informacionmabel-contenedor-informacion-foto" alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/mabel-cruz.png?_t=1696994314">
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
+                        <b>
+                            Mabel Cruz
+                            <br>
+                            Coordinadora de Laboratorio
+                            <br>
+                            <br>
+                        </b>
+                        Coordinar la disponibilidad de los recursos necesarios para apoyar los servicios externos, actividades académicas y científicas desarrolladas por los departamentos y grupos de investigación de la Facultad, a través de la experimentación en el laboratorio.
+                        <br>
+                        <label for="informacion-mabel" class="serviciodebiocompatibilidad-nosotros-seccion2-boton serviciodebiocompatibilidad-nosotros-seccion2-informacionmabel-contenedor-informacion-label"> 
+                            Atrás
+                        </label>
+                    </p>
+                </div>
+            </div>
+
+            <input type="checkbox" id="informacion-zyda">
+            <div class="serviciodebiocompatibilidad-nosotros-seccion2-informacionzyda-contenedor">
+                <div class="serviciodebiocompatibilidad-nosotros-seccion2-informacionzyda-contenedor-informacion">
+                    <img class="serviciodebiocompatibilidad-nosotros-seccion2-informacionzyda-contenedor-informacion-foto" alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/zayda-buitrago.png?_t=1696994318">
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
+                        <b>
+                            Zayda Buitrago
+                            <br>
+                            Gestora de Calidad
+                            <br>
+                            <br>
+                        </b>
+                        Asesorar, acompañar y monitorear el sistema de gestión de calidad de los laboratorios y talleres de la Universidad.
+                        <br>
+                        <label for="informacion-zyda" class="serviciodebiocompatibilidad-nosotros-seccion2-boton serviciodebiocompatibilidad-nosotros-seccion2-informacionzyda-contenedor-informacion-label"> 
+                            Atrás
+                        </label>
+                    </p>
+                </div>
+            </div>
+
+            <input type="checkbox" id="informacion-yulis">
+            <div class="serviciodebiocompatibilidad-nosotros-seccion2-informacionyulis-contenedor">
+                <div class="serviciodebiocompatibilidad-nosotros-seccion2-informacionyulis-contenedor-informacion">
+                    <img class="serviciodebiocompatibilidad-nosotros-seccion2-informacionyulis-contenedor-informacion-foto" alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/yulis-alarcon.png?_t=1696994318">
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
+                        <b>
+                            Yulis Alarcón
+                            <br>
+                            Técnico de Laboratorio
+                            <br>
+                            <br>
+                        </b>
+                        Realizar apoyo a las actividades académicas y de investigación que se realicen en los laboratorios, de acuerdo a programación semanal siguiendo los procedimientos e instructivos técnicos que apliquen.
+                        <br>
+                        <label for="informacion-yulis" class="serviciodebiocompatibilidad-nosotros-seccion2-boton serviciodebiocompatibilidad-nosotros-seccion2-informacionyulis-contenedor-informacion-label"> 
+                            Atrás
+                        </label>
+                    </p>
+                </div>
+            </div>
+
+            <input type="checkbox" id="informacion-valentina">
+            <div class="serviciodebiocompatibilidad-nosotros-seccion2-informacionvalentina-contenedor">
+                <div class="serviciodebiocompatibilidad-nosotros-seccion2-informacionvalentina-contenedor-informacion">
+                    <img class="serviciodebiocompatibilidad-nosotros-seccion2-informacionvalentina-contenedor-informacion-foto" alt="foto de persona" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/valentina-jaramillo.png?_t=1696994314">
+                    <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-texto">
+                        <b>
+                            Valentina Jaramillo
+                            <br>
+                            Asistente graduada
+                            <br>
+                            <br>
+                        </b>
+                        Contribuir en el desarrollo y avances de los proyectos de investigación definidos y asignados por el investigador, para el logro de los objetivos trazados por la facultad y la universidad en materia de proyectos de investigación, creación o consultoría.
+                        <br>
+                        <label for="informacion-valentina" class="serviciodebiocompatibilidad-nosotros-seccion2-boton serviciodebiocompatibilidad-nosotros-seccion2-informacionvalentina-contenedor-informacion-label"> 
+                            Atrás
+                        </label>
+                    </p>
+                </div>
+            </div>
+            
 
         </div>
 
@@ -442,7 +777,7 @@
             <img class="serviciodebiocompatibilidad-nosotros-seccion3-imagen" alt="imagen de laboratorio" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/promo-recorrido-virtual.jpg?_t=1696862968">
             <br>
             <a href="#" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-nosotros-seccion2-boton">
-                Recorrido 360
+                Próximamente
             </a>
         </div>
 
