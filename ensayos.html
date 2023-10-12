@@ -54,7 +54,7 @@
             .serviciodebiocompatibilidad-ensayos-seccion2-boton{
                 background-color: #00A59D;
                 width: fit-content;
-                padding: 1.5rem;
+                padding: 1rem;
                 display: inline-block;
                 color: white;
                 font-weight: bold;
@@ -176,7 +176,7 @@
         .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1{
             padding: 2rem;
             border-bottom: 3px black solid;
-            font-size: 35px;
+            font-size: 20px;
             font-weight: bold;
             transition: background-color 1s;
         }
@@ -199,7 +199,7 @@
         .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3{
             padding: 2rem;
             border-bottom: 3px black solid;
-            font-size: 35px;
+            font-size: 20px;
             font-weight: bold;
             transition: background-color 1s;
         }
@@ -207,8 +207,12 @@
             padding: 2rem;
             border-bottom: 3px black solid;
             display: none;
-            font-size: 20px;
         }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4 img{
+            width: 100%;
+        }
+
         #pregunta-2:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4{
             display: block;
         }
@@ -221,7 +225,7 @@
         .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5{
             padding: 2rem;
             border-bottom: 3px black solid;
-            font-size: 35px;
+            font-size: 20px;
             font-weight: bold;
             transition: background-color 1s;
         }
@@ -243,7 +247,7 @@
         .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7{
             padding: 2rem;
             border-bottom: 3px black solid;
-            font-size: 35px;
+            font-size: 20px;
             font-weight: bold;
             transition: background-color 1s;
         }
@@ -267,7 +271,7 @@
             font-size: 1.5rem;
             font-weight: bold;
             transition: background-color 1s;
-            font-size: 35px;
+            font-size: 20px;
         }
         .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10{
             padding: 2rem;
@@ -424,7 +428,7 @@
             display: flex;
             background-color: #00A59D;
             box-sizing: border-box;
-            padding: 5rem;
+            padding: 2rem;
         }
 
         .serviciodebiocompatibilidad-footer-columna1{
@@ -509,7 +513,32 @@
         .serviciodebiocompatibilidad-footer-columna5-fila a:hover .serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor{
             background-color: rgba(255, 255, 255, 0.774);
         }
+
+        .serviciodebiocompatibilidad-ensayos-seccion2-servicio1-acreditacion{
+            width: 80%;
+        }
     
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: white;
+            padding: 22px 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whatsapp-icon img {
+            width: 120px;
+            transition: all .3s;
+        }
+
+        .whatsapp-icon:hover img{
+            width: 125px;
+        }
+
         </style>
     </head>
 <body>
@@ -533,23 +562,18 @@
     </nav>
 
     <section>
+
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/TUNUMERO?text=Hola%20desde%20mi%20sitio%20web" target="_blank">
+                <img src="https://logos-world.net/wp-content/uploads/2020/05/Logo-WhatsApp.png" alt="WhatsApp">
+            </a>
+        </div>
     
         <div class="serviciodebiocompatibilidad-ensayos-seccion1">
                 <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion1-banner-texto">Ensayos</p>
         </div>
 
         <div class="serviciodebiocompatibilidad-ensayos-seccion2">
-
-            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-texto">
-                El laboratorio de Ingeniería Biomédica de la Facultad de Ingeniería de la Universidad 
-                de los Andes, presta el servicio de biocompatibilidad in vitro, especificamente de citotoxicidad 
-                para dispositivos médicos, fármacos, extractos naturales y aceites esenciales 
-                acreditado para ISO/IEC 17025:2017. Ofrecemos un servicio confiable para dispositivos 
-                médicos, farmacéuticos y aceites esenciales. Contactenos para una cotización y asegure la seguridad de sus productos.
-            </p>
-            <a href="https://forms.office.com/r/E28Qb4suKG" target="_blank" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-boton">
-                Solicite cotización
-            </a>
 
             <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-titulo">SERVICIOS QUE OFRECEMOS</p>
 
@@ -558,6 +582,8 @@
                 <div class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1">
                     <img alt="logo de servicio" class="serviciodebiocompatibilidad-ensayos-seccion2-imagen" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/icon-citoxicidad.png?_t=1696975279">
                     <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-titulosecundario"><br>Citotoxicidad</p><br>
+                    <img class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1-acreditacion" alt="logo de acreditacion" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/logo%20onac.png?_t=1696288291"/>
+                    <br>
                     <p style="font-family: 'Montserrat', sans-serif; font-size: 20px;" >El ensayo de citotoxicidad evalúa 
                         los posibles efectos nocivos en 
                         células de mamíferos (fibroblastos de ratón L929) utilizadas para 
@@ -570,6 +596,11 @@
                         de citotoxicidad se determina de 
                         acuerdo con la norma ISO 
                         10993-5:2009.</p>
+                    <br>
+                    <br>
+                    <a href="https://view.genial.ly/6526025b1ac8d10011c16ae2/interactive-content-ensayo-de-citotoxicidad-solo" target="_blank" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-boton">
+                        Conoce más
+                    </a>
                 </div>
 
                 <div class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1">
@@ -585,6 +616,21 @@
                         hemólisis se determina teniendo 
                         en cuenta la norma ISO 
                         10993-3:2018.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="https://view.genial.ly/652602641ac8d10011c17276/interactive-content-ensayo-de-hemocompatibilidad-solo" target="_blank" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-boton">
+                        Conoce más
+                    </a>
                 </div>
 
                 <div class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1">
@@ -597,6 +643,19 @@
                         aceite esencial. El porcentaje de 
                         agregación plauqetaria se determina de acuerdo con la norma 
                         ISO 10993-4:2018.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="https://view.genial.ly/652602641ac8d10011c17276/interactive-content-ensayo-de-hemocompatibilidad-solo" target="_blank" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-boton">
+                        Conoce más
+                    </a>
                 </div>
 
             </div>
@@ -623,10 +682,10 @@
                 <input type="checkbox" id="pregunta-2">
                 <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3" style="font-family: 'Montserrat', sans-serif">
                     <label for="pregunta-2" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
-                        ¿Cuánto cuesta el ensayo?
+                        ¿Cuál es el costo del ensayo?
                     </label>
                 </div>
-                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4" style="font-family: 'Montserrat', sans-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4" style="font-family: 'Montserrat', sans-serif"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/tabla-precios-servicios.png?_t=1697065349" alt="tabla de costos"></div>
 
                 <input type="checkbox" id="pregunta-3">
                 <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5" style="font-family: 'Montserrat', sans-serif">
@@ -641,7 +700,7 @@
                 <input type="checkbox" id="pregunta-4">
                 <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7" style="font-family: 'Montserrat', sans-serif">
                     <label for="pregunta-4" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
-                        ¿Qué significa estar acreditados por la ONAC para la ISO/IEC 17025:2017?
+                        ¿Qué significa estar acreditados por la ONAC con la ISO/IEC 17025:2017?
                     </label>
                 </div>
                 <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-8" style="font-family: 'Montserrat', sans-serif"><b>El Organismo Nacional de acreditación en Colombia (ONAC)</b> es el ente encargado de otorgar <b>acreditación</b> según la norma ISO/IEC 17025:2017, esto significa que un laboratorio de ensayo ha demostrado formalmente su competencia técnica y su capacidad para producir resultados de alta calidad y confiables en sus análisis, mediciones y calibraciones. La ISO/IEC 17025:2017 es una norma internacional que establece los requisitos generales para la competencia de los laboratorios y es ampliamente reconocida en todo el mundo.</div>
@@ -673,7 +732,7 @@
             </p>
 
             <a href="#" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-boton">
-                Aprende aquí
+                Próximamente
             </a>
 
         </div>
