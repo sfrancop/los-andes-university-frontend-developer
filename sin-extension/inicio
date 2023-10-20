@@ -620,6 +620,12 @@
 
     <section>
 
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/message/2QMYSD5HS6DAL1" target="_blank">
+                <img src="https://logos-world.net/wp-content/uploads/2020/05/Logo-WhatsApp.png" alt="WhatsApp">
+            </a>
+        </div>
+
         <div class="serviciodebiocompatibilidad-inicio-seccion1">
 
             <div class="serviciodebiocompatibilidad-inicio-seccion1-izquierda">
@@ -690,7 +696,7 @@
                     <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-inicio-seccion2-texto-2">
                         El cliente aprueba el servicio y envia la muestra
                     </p>
-                    <a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/formato-envio-de-muestras-ibio.pdf?_t=1697160286" target="_blank" style="font-family: 'Montserrat', sans-serif; width: 100%;" class="serviciodebiocompatibilidad-inicio-seccion2-proceso-boton">
+                    <a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/FTB-026%20Formato%20env%C3%ADo%20de%20muestras.pdf?_t=1697826168" target="_blank" style="font-family: 'Montserrat', sans-serif; width: 100%;" class="serviciodebiocompatibilidad-inicio-seccion2-proceso-boton">
                         Formato envío
                         <br>
                         de muestra
@@ -829,6 +835,7 @@
                     <a href="https://www.facebook.com/ingbiomedicauniandes/" target="_blank"><div class="serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor" id="especial"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/facebook-icon.png?_t=1696997950" alt="logo red social"></div></a>
                     <a href="https://www.linkedin.com/company/ingenieria-biomedica-uniandes/" target="_blank"><div class="serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/linkdn-icon.png?_t=1696997950" alt="logo red social"></div></a>
                     <a href="https://www.youtube.com/channel/UCejaquqRdimQdOL_5h56Eqw" target="_blank"><div class="serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/youtube-icon.png?_t=1696997950" alt="logo red social"></div></a>
+                    <a href="https://wa.me/message/2QMYSD5HS6DAL1" target="_blank"><div class="serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/whatsapp-icon.png?_t=1696997950" alt="logo red social"></div></a>
                 </div>
 
 
