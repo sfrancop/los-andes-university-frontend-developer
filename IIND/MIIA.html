@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla {
+      width: 100%;
+      margin: auto;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla * {
+      text-wrap: pretty;
+      font-size: 14px;
+    }
+
+    #pregunta-1,
+    #pregunta-2,
+    #pregunta-3,
+    #pregunta-4,
+    #pregunta-5,
+    #pregunta-6,
+    #pregunta-7,
+    #pregunta-8 {
+      display: none;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label {
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      padding-right: 40px;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label:hover {
+      text-decoration: underline;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-11,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-13,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-15 {
+      margin: 10px 0;
+      padding: 20px 0 20px 10px;
+      background-color: #EEEEEE;
+      border: solid 1px rgb(175, 175, 175);
+      border-radius: 8px;
+      transition: background-color .6s;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 60px;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-2 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+    }
+
+    #pregunta-1:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-2 {
+      display: block;
+    }
+
+    #pregunta-1:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+    }
+
+    #pregunta-2:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4 {
+      display: block;
+    }
+
+    #pregunta-2:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-6 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+
+    }
+
+    #pregunta-3:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-6 {
+      display: block;
+    }
+
+    #pregunta-3:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-8 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+
+    }
+
+
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+    }
+
+
+
+
+
+    #pregunta-4:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-8 {
+      display: block;
+    }
+
+    #pregunta-4:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10 {
+      padding: 2rem;
+      display: none;
+
+    }
+
+    #pregunta-5:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10 {
+      display: block;
+    }
+
+    #pregunta-5:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-12 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+    }
+
+    #pregunta-6:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-12 {
+      display: block;
+    }
+
+    #pregunta-6:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-11 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-14,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-16 {
+      padding: 2rem;
+      display: none;
+    }
+
+    #pregunta-7:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-14 {
+      display: block;
+    }
+
+    #pregunta-7:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-13 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+    #pregunta-8:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-16 {
+      display: block;
+    }
+
+    #pregunta-8:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-15 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+    li:not(.no-space) {
+      margin-bottom: 20px;
+    }
+
+    ol ul {
+      margin-left: 20px;
+    }
+
+    #flecha-1,
+    #flecha-2,
+    #flecha-3,
+    #flecha-4,
+    #flecha-5,
+    #flecha-6,
+    #flecha-7,
+    #flecha-8{
+      transition: transform .6s;
+    }
+
+    #pregunta-1:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1  #flecha-1,
+    #pregunta-2:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3  #flecha-2,
+    #pregunta-3:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5  #flecha-3,
+    #pregunta-4:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7  #flecha-4,
+    #pregunta-5:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9  #flecha-5,
+    #pregunta-6:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-11 #flecha-6,
+    #pregunta-7:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-13 #flecha-7,
+    #pregunta-8:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-15 #flecha-8{
+      transform: rotate(180deg);
+    }
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <p><strong>Campus:&nbsp;</strong>Sede Centro, Bogotá.&nbsp; &nbsp; &nbsp;&nbsp;<br />
+    <strong>Modalidad:</strong>&nbsp;Presencial, Tiempo Parcial, Nocturno<br />
+    <strong>Formación Universitaria:</strong>&nbsp;Posgrado<br />
+    <strong>Título:</strong>&nbsp; Magíster en Inteligencia Analítica para la Toma de Decisiones&nbsp;<br />
+    <strong>Registro calificado:</strong>&nbsp; Resolución Número 018299 del 28 de septiembre de 2021
+  </p>
+
+  <hr />
+  <p class="rtejustify">Este programa ha sido diseñado para profesionales, no necesariamente de áreas STEM (ciencias,
+    tecnología, ingeniería y matemáticas, por sus siglas en inglés), con conocimientos en programación y estadística,
+    quienes serán formados para atender aquellas preguntas del negocio que requieren del análisis de un alto volumen de
+    datos y el manejo de su complejidad para apoyar los procesos de toma de decisiones, la creación de ventajas
+    competitivas y la generación de valor.</p>
+  
+  <p class="rtejustify">Este programa es ideal para profesionales que:</p>
+
+  <ul style="margin-left: 1rem;" role="list">
+    <li class="rtejustify no-space" role="listitem">Sean egresados de áreas cuantitativas como ingeniería, economía,
+      matemáticas, entre otras.</li>
+    <li class="rtejustify no-space" role="listitem">Sean egresados de otras disciplinas y tengan experiencia&nbsp;en
+      análisis de datos y/o manejo de información o de grandes bases de datos.</li>
+    <li class="rtejustify no-space" role="listitem">Estén interesados y motivados por aplicar técnicas avanzadas de
+      ingeniería para dar soporte a la toma de decisiones en las organizaciones.</li>
+    <li class="rtejustify no-space" role="listitem">Estén motivados a asumir los procesos de enseñanza y aprendizaje a
+      través de medios virtuales.</li>
+  </ul>
+
+  <br />
+  
+  <h2 class="rtecenter" id="requisitos-de-admisin"><span style="font-size:25px;"><strong>ADMISIONES SEGUNDO SEMESTRE DE
+        2024&nbsp;</strong></span></h2>
+
+  <p align="center"><strong>INICIO DE INSCRIPCIONES: 29 de enero de 2024</strong></p>
+
+  <br />
+
+
+  <div class="serviciodebiocompatibilidad-ensayos-seccion3">
+
+    <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla">
+
+      <input type="checkbox" id="pregunta-1"> 
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1">
+        <label for="pregunta-1" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Paso a paso del proceso de Admisión a MIIA</p> <svg id="flecha-1" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-2">
+        <b>
+          <ol style="padding: 0; margin-left: 1rem;" type="a">
+            <li>
+              <b> Crear nombre de usuario y diligenciar completamente el
+                formulario para la solicitud de admisión en el siguiente enlace:
+                <a style="color:#800080;" href="https://mibanner.uniandes.edu.co/PROD/bwskwalog.P_DispLoginNon">ir al
+                  formulario</a>.</b>
+            </li>
+            <li>
+              <b> Preparar y cargar los siguientes documentos requisito del
+                proceso de admisión del programa en el siguiente enlace:
+                <a style="color:#800080;" href="https://registroapps.uniandes.edu.co/SisAdmisiones/Documentos/">cargar
+                  documentos</a></b>
+            </li>
+            <ul>
+              <li class="no-space"> <b> Acta o diploma de pregrado. No se aceptan certificados de terminación de
+                  estudios o de candidatura a
+                  grado.</b></li>
+              <li class="no-space"> <b> Certificado oficial de notas o calificaciones de pregrado. Los egresados
+                  UniAndinos pueden descargar
+                  el registro de notas que genera el sistema Banner en impresión pdf. No se aceptan capturas de pantalla
+                  editadas o ediciones realizadas por el aspirante.</b></li>
+              <li class="no-space"> <b> Hoja de vida actualizada.</b></li>
+              <li class="no-space"> <b> Una (1) certificación que acrediten mínimo un (1) año de experiencia 
+                laboral contada a partir del momento en el que obtuvo su titulo
+                de pregrado. Ideal, más no indispensable, en áreas relacionadas
+                con el análisis de datos y/o manejo de información o de grandes 
+                bases de datos.</b>
+              </li>
+              <li class="no-space"> <b> Video de motivación (máx. 2 minutos de duración) en el que se incluya:</b>
+        </b></li>
+
+        <ul style="font-weight: bold;">
+          <li class="no-space">Perfil profesional y personal del aspirante, incluyendo programas de estudios
+            culminados, experiencia laboral, cargos y habilidades relacionadas con analítica de datos.</li>
+          <li class="no-space">Motivación para estudiar la Maestría en Inteligencia Analítica para la Toma de
+            Decisiones (MIIA) y sus razones para profundizar en la aplicación de Analytics.</li>
+          <li class="no-space">Cualidades y habilidades particulares en el análisis de datos, que soporten su
+            selección para hacer parte del programa académico.</li>
+        </ul>
+        </ul>
+        <p>
+          Para más detalles sobre la documentación y requisitos generales
+          consulte el siguiente enlace:
+          <a href="https://registroapps.uniandes.edu.co/SisAdmisiones/Posgrado/#documentos"
+            style="color:#800080;">información adicional</a>.
+        </p>
+        <p><b>RECOMENDACIONES PARA TODO DOCUMENTO</b></p>
+        <ul>
+          <li style="font-size: 14px;" class="no-space">Solo se aceptan documentos legibles con información completa del
+            aspirante y de la
+            entidad que los emite.</li>
+          <li style="font-size: 14px;" class="no-space">Si el documento se emite en el extranjero, no se requiere que
+            sea apostillado. En caso
+            de que el documento sea expedido en un idioma diferente al español, debe venir acompañado de una
+            traducción oficial.</li>
+          <li style="font-size: 14px;">El documento con firma digital debe poder ser validado en el momento de la
+            revisión por parte de la
+            Dirección de Admisiones. En caso de que cargue un documento que no cuente con firma digital y sea
+            admitido, la Universidad de los Andes lo validará con la universidad que lo emite. Si la universidad de
+            origen no ofrece el servicio de validación o no es posible realizar la verificación, se solicitará la
+            entrega del documento original durante el primer semestre de estudio. En cualquier escenario, se
+            recomienda contar con el documento original para poder entregar una copia autenticada de manera física en
+            caso de que sea solicitado.</li>
+        </ul>
+        <b>
+          <li>
+            <p>
+              Realizar el pago e inscripción (si es el caso) al examen de aptitudes del Departamento de Psicología.
+              Dado que este examen tiene fechas específicas de pago y presentación, no olvide revisarlas con detalle
+              en la sección “Fechas para Inscripción y Admisión a MIIA”. Enlace para pago:
+              <a href="https://recaudos.uniandes.edu.co/pagos/login.xhtml?unidadCodigo=CISO&amp;dependenciaId=336&amp;productoId=6963"
+                style="color:#800080;">ir al pago</a>
+            </p>
+            
+            <p>
+              Para efectos del pago, selecciona los campos así:
+            </p>
+            <p>Unidad(*): FAC DE CIENCIAS SOCIALES</p>
+            <p>Dependencia: DPTO DE PSICOLOGÍA</p>
+            <p>Producto(*): Inscripción Prueba Aptitudes</p>
+            
+            <p>
+              Para más detalles sobre el examen de aptitudes, consulte:
+              <a href="https://cienciassociales.uniandes.edu.co/psicologia/wp-content/uploads/sites/17/2020/11/guia-pa.pdf"
+                style="color:#800080;">ver detalles</a>.
+            </p>
+            <p>Además, no olvide revisar la sección “Información acerca del examen de aptitudes del Depto. de
+              Psicología” en donde existe un beneficio para egresados Uniandinos.</p>
+          </li>
+          <li>
+            <p>Preparar y presentar el examen específico de conocimientos del programa. Examen de conocimientos
+              generales en Probabilidad, Estadística y Análisis de Datos.&nbsp; Este examen es diferente al examen de
+              aptitudes y es obligatorio para todos los interesados en ser admitidos a MIIA. Puede ampliar información
+              más adelante. Además, no olvide revisar la sección “Información acerca del examen específico de conocimiento del programa MIIA” en donde existe un beneficio para egresados Uniandinos Ingenieros Industriales.
+            </p>
+          </li>
+          <li>
+            <p>
+              Consultar el resultado del proceso de admisión en el siguiente enlace: <a
+                href="https://industrial.uniandes.edu.co/es/programas-academicos/maestria-miia"><span
+                  style="color:#800080;">consultar resultados</a>.</p>
+          </li>
+        </b>
+        </ol>
+      </div>
+
+      <input type="checkbox" id="pregunta-2">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3">
+        <label for="pregunta-2" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Fechas para Inscripción y Admisión a MIIA</p> <svg id="flecha-2" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4">
+        <p>Aspirante, tenga en cuenta que:</p>
+
+
+        <ul style="padding-left: 1rem;">
+          <li class="no-space"><strong>Las inscripciones&nbsp;se abren a partir del 29&nbsp;de enero&nbsp;de
+              2024.</strong></li>
+          <li class="no-space"><strong>La fecha de inicio de clases es el 5 de agosto de 2024.​</strong></li>
+          <li class="no-space"><strong>Este semestre se tienen varios cortes de admisión. En cada uno de ellos se
+              realizará la evaluación de los aspirantes al programa que, hasta la&nbsp;fecha del corte, hayan completado
+              en su totalidad el cargue de documentos y los requisitos de admisión.​​</strong></li>
+          <li class="no-space"><strong>Si se encuentra interesado en obtener el resultado del proceso de admisión en
+              alguna fecha particular, no olvide identificar cuándo debe presentar el examen&nbsp;de admisión entre las
+              fechas disponibles, así como el plazo límite para cargar los documentos en la plataforma de la Dirección
+              de Admisiones.</strong></li>
+          <li class="no-space"><strong>Para más detalles sobre el proceso de inscripción a </strong><a
+              href="https://registroapps.uniandes.edu.co/SisAdmisiones/Posgrado/"><span
+                style="color:#800080;"><strong>posgrados Uniandes</strong></span></a>.</li>
+        </ul>
+
+        
+
+        <strong>RECOMENDACIONES PARA TODO DOCUMENTO</strong></p>
+
+        <ul style="padding-left: 1rem;">
+          <li class="no-space">Solo se aceptan documentos legibles con información completa del aspirante y de la
+            entidad que los emite.</li>
+          <li class="no-space">Si el documento se emite en el extranjero, no se requiere que sea apostillado. En caso de
+            que el documento sea expedido en un idioma diferente al español, debe venir acompañado de una traducción
+            oficial.</li>
+          <li class="no-space">El documento con firma digital debe poder ser validado en el momento de la revisión por
+            parte de la Dirección de Admisiones. En caso de que cargue un documento que no cuente con firma digital y
+            sea admitido, la Universidad de los Andes lo validará con la universidad que lo emite. Si la universidad de
+            origen no ofrece el servicio de validación o no es posible realizar la verificación, se solicitará la
+            entrega del documento original durante el primer semestre de estudio. En cualquier escenario, se recomienda
+            contar con el documento original para poder entregar una copia autenticada de manera física en caso de que
+            sea solicitado</li>
+        </ul>
+
+        
+
+        ​<strong>PRÓXIMAMENTE: Webinar informativo sobre el programa y el examen específico de conocimientos, por
+          definir fecha y hora. Por el momento, en el siguiente enlace se puede visualizar el webinar informativo del
+          año 2022: </strong><a href="https://www.youtube.com/watch?v=cbwtfqwtnwk"><span
+            style="color:#800080;"><strong>enlace</strong></span></a>.</p>
+
+        <p><strong>a. Primer estudio de admisión – MIIA</strong></p>
+
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+         padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+         border-radius: 8px; will-change: transform;"><iframe allow="fullscreen" allowfullscreen="allowfullscreen"
+            loading="lazy" src="https://www.canva.com/design/DAF60z7cg6E/view?embed"
+            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"></iframe>
+        </div>
+
+        <p><strong>b. Segundo estudio de admisión – MIIA
+          </strong></p>
+
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+         padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+         border-radius: 8px; will-change: transform;"><iframe allow="fullscreen" allowfullscreen="allowfullscreen"
+            loading="lazy" src="https://www.canva.com/design/DAF61aUBiLs/view?embed"
+            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"></iframe>
+        </div>
+
+        <p><strong>c. Tercer estudio de admisión – MIIA</strong></p>
+
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+         padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+         border-radius: 8px; will-change: transform;"><iframe allow="fullscreen" allowfullscreen="allowfullscreen"
+            loading="lazy" src="https://www.canva.com/design/DAF61fJeBS8/view?embed"
+            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"></iframe>
+        </div>
+
+
+      </div>
+
+      <input type="checkbox" id="pregunta-3">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5">
+        <label for="pregunta-3" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Información acerca del examen de aptitudes del Depto. de Psicología</p> <svg id="flecha-3" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-6">
+
+        <p>La prueba de aptitudes que aplica el Departamento de Psicología de la Universidad de los Andes hace parte de
+          los requisitos de admisión para el programa MIIA. Por ello, es importante tener presente la fecha en la cual
+          se notifica si usted fue eximido de pagar y presentar este examen. Revise las fechas importantes del proceso.
+        </p>
+        
+        <p>La prueba, que se <strong>será aplicada de manera virtual</strong>, tiene la finalidad de evaluar aptitudes
+          relacionadas con el éxito en la vida profesional: aptitud matemática, aptitud verbal, razonamiento lógico,
+          comprensión lingüística y razonamiento integrado (para más detalles: <a style="color:#800080;"
+            href="https://cienciassociales.uniandes.edu.co/psicologia/wp-content/uploads/sites/17/2020/11/guia-pa.pdf">ver
+            guia de preparacion</a>). Dado que se aplicará de manera virtual, usted la podrá presentar desde su lugar de
+          residencia o el lugar que considere conveniente. Durante la prueba los únicos elementos permitidos son:
+          computador con videocámara, una conexión a internet estable, hojas en blanco (una o dos), lápiz y borrador.
+        </p>
+        
+        <p>La prueba se puede presentar una vez por semestre y ésta tiene validez de dos (2) años. Si usted desea que se
+          tenga en cuenta una prueba presentada por usted con anterioridad, debe informarlo al Departamento de
+          Psicología y al Departamento de Ingeniería Industrial</p>
+        
+        <p><span style="color:#800080;"><strong>BENEFICIOS PARA EGRESADOS UNIANDINOS</strong>&nbsp;&nbsp;</span></p>
+        
+        <p>La Facultad de Ingeniería de la Universidad de los Andes otorga un reconocimiento a sus egresados con un
+          promedio académico acumulado de pregrado igual o superior a 3,75. Si usted cumple con este requisito, estará
+          exento del pago y de la presentación del examen de admisión. Sin embargo, es indispensable que usted
+          diligencie el formulario de admisión y haga el cargue de la documentación completa en la Dirección de
+          Admisiones antes de la fecha de cierre. Adicionalmente, usted debe presentar el examen específico del
+          programa.&nbsp; Si tiene algún inconveniente o duda con este proceso por favor comuníquese con el Departamento
+          de Ingeniería Industrial al correo <a
+          style="color:#800080;"
+          href="mailto:d.torresh@uniandes.edu.co">d.torresh@uniandes.edu.co</a></p>
+        
+        <p>Recuerde que:</p>
+
+        <ul style="margin-left: 1rem;">
+          <li class="no-space">Este examen tiene costo y un pago asociado que usted debe asumir en caso de que usted no
+            sea eximido.</li>
+          <li class="no-space">La inscripción y el pago del examen de aptitudes debe realizarse a través de la <a
+              style="color:#800080;"
+              href="https://recaudos.uniandes.edu.co/pagos/login.xhtml?unidadCodigo=CISO&amp;dependenciaId=336&amp;productoId=6963">página
+              de recaudos</a></li>
+          <li class="no-space">El examen se realizará de manera virtual.</li>
+          <li class="no-space">No olvide revisar con precisión las fechas en las cuales se realiza el examen y la fecha
+            límite de inscripciones a éste.</li>
+          <li class="no-space">El examen es aplicado directamente por el Departamento de Psicología, Facultad de
+            Ciencias Sociales, de la Universidad de los Andes.</li>
+        </ul>
+
+      </div>
+
+      <input type="checkbox" id="pregunta-4">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7">
+        <label for="pregunta-4" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Información acerca del examen específico de conocimiento del programa MIIA</p> <svg id="flecha-4" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-8">
+
+        <p>Todos los aspirantes interesados en ser admitidos en el programa MIIA deben presentar obligatoriamente el
+          examen específico de conocimientos del programa. Las temáticas del examen están relacionadas con conocimientos
+          generales en probabilidad, estadística, análisis de datos, programación en Python y/o R, análisis gráfico y
+          fundamentación matemática.&nbsp;</p>
+        
+        <p>Recuerde que:</p>
+
+        <ul style="margin-left: 1rem;">
+          <li class="no-space">Este examen es diferente al examen de aptitudes realizado por el Departamento de
+            Psicología</li>
+          <li class="no-space">Este examen no tiene costo</li>
+          <li class="no-space">El examen se realizará de manera virtual</li>
+          <li class="no-space">No olvide revisar con precisión las fechas en las cuales se realiza el examen</li>
+          <li class="no-space">Si desea prepararse para el examen puede hacerlo a través de los siguientes MOOCs
+            gratuitos disponibles en la plataforma de <em>Coursera</em>:
+            <ul style="list-style-type:circle;margin-left: 1rem;">
+              <li class="no-space"><a style="color:#800080;"
+                  href="https://www.coursera.org/learn/probabilidad"><em>Fundamentos de probabilidad y
+                    aplicaciones</em></a></li>
+              <li class="no-space"><a style="color:#800080;"
+                  href="https://www.coursera.org/learn/estadistica-aplicada-fundamentos"><em>Fundamentos de estadística
+                    aplicada</em></a></li>
+              <li class="no-space"><a style="color:#800080;"
+                  href="https://www.coursera.org/learn/programacion-python"><em>Programación en Python</em></a></li>
+              <li class="no-space"><a style="color:#800080;"
+                  href="https://www.coursera.org/learn/analytics-analisis-datos"><em>Analytics en las
+                    organizaciones</em></a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><span style="color:#800080;"><strong>BENEFICIOS PARA EGRESADOS UNIANDINOS</strong>&nbsp;&nbsp;</span></p>
+
+        <p>El Departamento de Ingeniería Industrial de la Universidad de los Andes otorga un reconocimiento a sus egresados del pregrado en Ingeniería Industrial que se hayan graduado entre los cinco (5) años anteriores al ingreso al posgrado. Si usted cumple con este requisito, estará exento de la presentación del examen específico de conocimientos del programa MIIA. Sin embargo, es indispensable que usted diligencie el formulario de admisión y haga el cargue de la documentación completa en la Dirección de Admisiones antes de la fecha de cierre. Si tiene algún inconveniente o duda con este proceso por favor comuníquese con el Departamento de Ingeniería Industrial al correo <a
+          style="color:#800080;"
+          href="mailto:d.torresh@uniandes.edu.co">d.torresh@uniandes.edu.co</a></p>
+
+      </div>
+
+      <input type="checkbox" id="pregunta-8">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-15">
+        <label for="pregunta-8" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Beneficios para Egresados Uniandinos</p> <svg id="flecha-8" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-16">
+
+        <p><span style="color:#800080;"><strong>BENEFICIOS PARA EGRESADOS UNIANDINOS - EXENTO DE EXAMEN DE ADMISIÓN</strong>&nbsp;&nbsp;</span></p>
+
+        <p>La Facultad de Ingeniería de la Universidad de los Andes otorga un reconocimiento a sus egresados con un promedio académico acumulado de pregrado igual o superior a 3,75. Si usted cumple con este requisito, estará exento del pago y de la presentación del examen de admisión. Sin embargo, es indispensable que usted diligencie el formulario de admisión y haga el cargue de la documentación completa en la Dirección de Admisiones antes de la fecha de cierre. Adicionalmente, usted debe presentar el examen específico del programa.  Si tiene algún inconveniente o duda con este proceso por favor comuníquese con el Departamento de Ingeniería Industrial al correo <a
+          style="color:#800080;"
+          href="mailto:d.torresh@uniandes.edu.co">d.torresh@uniandes.edu.co</a></p>
+
+          <p><span style="color:#800080;"><strong>BENEFICIOS PARA EGRESADOS UNIANDINOS INGENIEROS INDUSTRIALES - EXENTO DE EXAMEN ESPECIFICO DE CONOCIMIENTOS</strong>&nbsp;&nbsp;</span></p>
+
+          <p>El Departamento de Ingeniería Industrial de la Universidad de los Andes otorga un reconocimiento a sus egresados del pregrado en Ingeniería Industrial que se hayan graduado entre los cinco (5) años anteriores al ingreso al posgrado. Si usted cumple con este requisito, estará exento de la presentación del examen específico de conocimientos del programa MIIA. Sin embargo, es indispensable que usted diligencie el formulario de admisión y haga el cargue de la documentación completa en la Dirección de Admisiones antes de la fecha de cierre. Si tiene algún inconveniente o duda con este proceso por favor comuníquese con el Departamento de Ingeniería Industrial al correo <a
+            style="color:#800080;"
+            href="mailto:d.torresh@uniandes.edu.co">d.torresh@uniandes.edu.co</a></p>
+  
+
+      </div>
+
+      <input type="checkbox" id="pregunta-5">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9">
+        <label for="pregunta-5" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Requisito de Inglés</p> <svg id="flecha-5" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10">
+        <p>Todos los estudiantes admitidos a MIIA, deben demostrar que tienen un nivel suficiente de lectura en inglés,
+          a través de alguna de las siguientes alternativas:</p>
+        
+        <ol style="padding: 0; margin-left: 1rem;">
+          <li>Presentación del examen de evaluación diagnóstica que administra directamente el Departamento de Lenguas y
+            Cultura de la Universidad. La Coordinación Académica de Analytics informará en su momento la fecha de
+            presentación de este examen que medirá el nivel de lectura en inglés y clasificará a los estudiantes en tres
+            grupos:</li>
+
+          <ul>
+            <li class="no-space">Los que tienen nivel suficiente de lectura en inglés.</li>
+            <li class="no-space">Los que sólo necesitan tomar el Taller de Lectura II que ofrece el Departamento de Lenguas y Cultura,
+              para obtener el nivel suficiente de lectura en inglés.</li>
+            <li>Los que necesitan tomar los Talleres de Lectura I y II que ofrece el Departamento de Lenguas y Cultura,
+              para obtener el nivel suficiente de lectura en inglés.</li>
+          </ul>
+
+          <li>Aportando el resultado vigente del TOEFL (dos años de vigencia) en el momento de su ingreso a la maestría.
+            Los puntajes mínimos aceptados son TOEFL 213/300 u 80/120.</li>
+          <li>Aportando el resultado vigente IELTS (dos años de vigencia) en el momento de su ingreso al posgrado, con
+            puntaje de 6,5.</li>
+          <li>Haberse graduado de un programa de pregrado de la Universidad de los Andes, entre los cinco (5) años
+            anteriores al ingreso al posgrado.</li>
+          <li>Aportando un diploma universitario (pregrado, maestría o doctorado) de un país angloparlante.</li>
+        </ol>
+
+        <p><strong>En caso de dudas o inquietudes, por favor comuníquese con el Departamento de Ingeniería Industrial a
+            través del correo o a la extensión 2897.</strong></p>
+
+      </div>
+
+      <input type="checkbox" id="pregunta-6">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-11">
+        <label for="pregunta-6" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Aspirantes extranjeros / Estudiantes extranjeros – Observaciones</p> <svg id="flecha-6" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-12">
+
+        <p>Si el aspirante es ciudadano extranjero y es admitido a la Universidad de los Andes, de acuerdo al Decreto
+          0834 del 24 de abril del 2013 y Resolución 6045 del 02 de agosto del 2017, expedida por el Ministerio de
+          Relaciones Exteriores, es obligatorio que cuente con Visa de Estudiante u otro tipo de visa que permita
+          estudiar. La visa deberá ser presentada en la Dirección de Admisiones o enviada al correo <a
+            style="color:#800080;"
+            href="mailto:extranjerosuniandes@uniandes.edu.co">extranjerosuniandes@uniandes.edu.co</a>, antes de la
+          impresión del recibo de matrícula.</p>
+        
+        <p>Si tiene dudas acerca del proceso de visas para estudiar, comuníquese al teléfono 3394949 Ext. 2211, o al
+          correo: <a style="color:#800080;"
+            href="mailto:extranjerosuniandes@uniandes.edu.co">extranjerosuniandes@uniandes.edu.co</a></p>
+        
+        <p><strong>RECOMENDACIONES PARA TODO DOCUMENTO</strong></p>
+
+        <ul style="margin-left:1rem;">
+          <li class="no-space">Solo se aceptan documentos legibles con información completa del aspirante y de la
+            entidad que los emite.</li>
+          <li class="no-space">Si el documento se emite en el extranjero, no se requiere que sea apostillado. En caso de
+            que el documento sea expedido en un idioma diferente al español, debe venir acompañado de una traducción
+            oficial.</li>
+          <li class="no-space">El documento con firma digital debe poder ser validado en el momento de la revisión por
+            parte de la Dirección de Admisiones. En caso de que cargue un documento que no cuente con firma digital y
+            sea admitido, la Universidad de los Andes lo validará con la universidad que lo emite. Si la universidad de
+            origen no ofrece el servicio de validación o no es posible realizar la verificación, se solicitará la
+            entrega del documento original durante el primer semestre de estudio. En cualquier escenario, se recomienda
+            contar con el documento original para poder entregar una copia autenticada de manera física en caso de que
+            sea solicitado.</li>
+        </ul>
+        
+        <p>**Información sujeta a cambios sin previo aviso.</p>
+
+
+      </div>
+
+      <input type="checkbox" id="pregunta-7">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-13">
+        <label for="pregunta-7" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Cuenta Uniandes</p> <svg id="flecha-7" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-14">
+        <p>Los aspirantes admitidos que nunca hayan estado vinculados a la Universidad, recibirán el correo de
+          activación de Cuenta Uniandes una vez se hayan procesado las admisiones en nuestros sistemas de información.
+          Una vez activada la cuenta de correo Uniandes, usted podrá realizar los diferentes procesos que aplican para
+          los estudiantes de primer semestre de posgrado.</p>
+        
+        <p>Puede consultar estos procesos en el siguiente enlace: <a style="color:#800080;"
+            href="https://registro.uniandes.edu.co/index.php/posgrados/guia-de-ingreso-estudiante-nuevo">guía del
+            estudiante de primer semestre</a>.</p>
+
+      </div>
+
+
+    </div>
+
+</body>
+
+</html>

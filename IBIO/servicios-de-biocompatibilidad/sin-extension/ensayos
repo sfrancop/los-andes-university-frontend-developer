@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Poppins:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://biomedicatest.uniandes.edu.co/sites/default/files/favicon_0.ico" type="image/x-icon">
+        <title>Servicios de biocompatibilidad | Uniandes</title>
+        <style>
+    
+            body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+                margin:0;
+                padding:0;
+            }
+            html,body {
+                margin:0;
+                padding:0;
+            } 
+
+            *{
+            text-decoration: none;
+            list-style: none;
+            }
+    
+            body{
+                font-family: 'Montserrat', sans-serif !important;
+            }
+
+            .serviciodebiocompatibilidad-ensayos-seccion1{
+                text-align: center;
+                color: #00A59D;
+                font-size: 50px;
+                font-weight: 900;
+                text-align: end;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                background-image: url('https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/imagen-banner-2-ensayos.jpg?_t=1696304967');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 47vh;
+            }
+
+            .serviciodebiocompatibilidad-ensayos-seccion2-texto{
+                padding: 5rem 5rem 2rem 5rem;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .serviciodebiocompatibilidad-ensayos-seccion2-boton{
+                background-color: #00A59D;
+                width: fit-content;
+                padding: 1rem;
+                display: inline-block;
+                color: white;
+                font-weight: bold;
+                text-decoration: none;
+                transition: all .2s;
+                font-size: 20px;
+            }
+
+            .serviciodebiocompatibilidad-ensayos-seccion2-boton:hover{
+                background-color: white;
+                color: black;
+            }
+
+        .serviciodebiocompatibilidad-ensayos-seccion2{
+            background-image: url("https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/fondo-sitio.jpg?_t=1696525237");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion2-titulo{
+            padding-top: 5rem;
+            margin-bottom: 5rem;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion4-titulo{
+            margin-bottom: 2rem;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3-titulo{
+            padding-top: 5rem;
+            margin-bottom: 2rem;
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion2-titulo-secundario{
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-titulosecundario{
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion2-imagen{
+            width: 40%;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion2-fila{
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-bottom: 5rem;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion2-servicio1{
+            width: 20%;
+            border: 5px #00A59D solid;
+            border-radius: 4rem;
+            padding: 2rem 1rem;
+            flex-basis: 300;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3{
+            text-align: center;
+            padding-bottom: 5rem;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion1-banner-texto{
+            padding-right: 5rem;
+            font-size: 50px;
+            font-weight: 900;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla{
+            border: 5px #00A59D solid;
+            width: 80%;
+            margin: auto;
+        }
+
+
+        #pregunta-1{
+            display: none;
+        }
+
+        #pregunta-2{
+            display: none;
+        }
+
+        #pregunta-3{
+            display: none;
+        }
+
+        #pregunta-4{
+            display: none;
+        }
+
+        #pregunta-5{
+            display: none;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label{
+            cursor: pointer;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1{
+            padding: 2rem;
+            border-bottom: 3px black solid;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background-color 1s;
+        }
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-2{
+            padding: 2rem;
+            border-bottom: 3px black solid;
+            display: none;
+            font-size: 20px;
+        }
+        #pregunta-1:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-2{
+            display: block;
+        }
+
+        #pregunta-1:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1{
+            border: 0;
+            background-color: #00A59D;
+            color: white;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3{
+            padding: 2rem;
+            border-bottom: 3px black solid;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background-color 1s;
+        }
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4{
+            padding: 2rem;
+            border-bottom: 3px black solid;
+            display: none;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4 img{
+            width: 100%;
+        }
+
+        #pregunta-2:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4{
+            display: block;
+        }
+        #pregunta-2:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3{
+            border: 0;
+            background-color: #00A59D;
+            color: white;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5{
+            padding: 2rem;
+            border-bottom: 3px black solid;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background-color 1s;
+        }
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-6{
+            padding: 2rem;
+            border-bottom: 3px black solid;
+            display: none;
+            font-size: 20px;
+        }
+        #pregunta-3:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-6{
+            display: block;
+        }
+        #pregunta-3:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5{
+            border: 0;
+            background-color: #00A59D;
+            color: white;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7{
+            padding: 2rem;
+            border-bottom: 3px black solid;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background-color 1s;
+        }
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-8{
+            padding: 2rem;
+            border-bottom: 3px black solid;
+            display: none;
+            font-size: 20px;
+        }
+        #pregunta-4:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-8{
+            display: block;
+        }
+        #pregunta-4:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7{
+            border: 0;
+            background-color: #00A59D;
+            color: white;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9{
+            padding: 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: background-color 1s;
+            font-size: 20px;
+        }
+        .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10{
+            padding: 2rem;
+            display: none;
+            font-size: 20px;
+        }
+        #pregunta-5:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10{
+            display: block;
+        }
+        #pregunta-5:checked ~ .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9{
+            border: 0;
+            background-color: #00A59D;
+            color: white;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion4-texto{
+            width: 80%;
+            margin: auto;
+            margin-bottom: 2rem;
+            font-size: 20px;
+        }
+
+        @media (max-width: 1271px){
+
+            body{
+                width: 100vh;
+            }
+
+            *{
+                font-size: 30px;
+            }
+
+            .serviciodebiocompatibilidad-ensayos-seccion2-fila{
+                display: block;
+            }
+
+            .serviciodebiocompatibilidad-ensayos-seccion2-servicio1{
+                margin: auto;
+                width: 60%;
+                margin-bottom: 2rem;
+            }
+
+            .serviciodebiocompatibilidad-ensayos-seccion1-banner-texto{
+                padding: 0;
+                margin: auto;
+            }
+        }
+
+        nav{
+            font-size: 1px;
+            background: white;
+            position: fixed;
+            height: 110px;
+            width: 100%;
+            padding: .2rem 0 .5rem 0;
+            z-index: 1;
+        }
+        .enlace{
+            position: absolute;
+            padding: 1rem 5rem;
+        }
+        .logo{
+            height: 90px;
+        }
+        nav ul{
+            float: right;
+            margin-right: 5rem;
+            margin-top: 2rem;
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 60px;
+            margin: 0 5px;
+        }
+        nav ul li a{
+            color: black;
+            font-size: 20px;
+            padding: 7px 13px;
+            transition: all 0.1s;
+            border-bottom: 0px solid black;
+            font-weight: bold;
+        }
+        li a.active, li a:hover{
+            color: #00A59D;
+            border-bottom: 4px solid black;
+        }
+        .checkbtn{
+            color: #fff;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        section{
+            padding-top: 7.5rem;
+        }
+
+        .barras{
+            width: auto;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 952px){
+            .enlace{
+                padding-left: 20px;
+            }
+        }
+
+        @media (max-width: 858px){
+            .checkbtn{
+                margin-top: 2rem;
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: white;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav{
+                padding: 0;
+            }
+
+            nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a{
+                color: black;
+            }
+
+            li a:hover, li a.active{
+                background: none;
+            }
+            #check:checked ~ ul{
+                left:0;
+            }
+        }
+
+        .serviciodebiocompatibilidad-footer{
+            width: 100%;
+            display: flex;
+            background-color: #00A59D;
+            box-sizing: border-box;
+            padding: 2rem;
+        }
+
+        .serviciodebiocompatibilidad-footer-columna1{
+            width: 55%;
+            height: 100%;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .serviciodebiocompatibilidad-footer-columna1-logo{
+            width: 50%;
+        }
+
+        .serviciodebiocompatibilidad-footer-columna2, .serviciodebiocompatibilidad-footer-columna4{
+            background-color: white;
+            width: .3%;
+            height: 300px;
+        }
+
+        .serviciodebiocompatibilidad-footer-columna3{
+            width: 27.8%;
+            height: 100%;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .serviciodebiocompatibilidad-footer-columna5{
+            width: 27.8%;
+            height: 100%;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .serviciodebiocompatibilidad-footer-texto{
+            font-size: 14px;
+            color: white;
+        }
+
+        .serviciodebiocompatibilidad-footer-titulo{
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .serviciodebiocompatibilidad-footer a{
+            color: white;
+        }
+
+        .serviciodebiocompatibilidad-footer a:hover{
+            color: rgba(255, 255, 255, 0.774);
+        }
+
+        .serviciodebiocompatibilidad-footer-columna5-fila{
+            display: flex;
+            gap: 10px;
+        }
+
+        .serviciodebiocompatibilidad-footer-columna5-fila-icono{
+            width: 20px;
+            filter: invert(1);
+        }
+
+        .serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor{
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor img{
+            width: 25px;
+        }
+
+        #especial img{
+            margin-left: 5px;
+        }
+
+        .serviciodebiocompatibilidad-footer-columna5-fila a:hover .serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor{
+            background-color: rgba(255, 255, 255, 0.774);
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion2-servicio1-acreditacion{
+            width: 80%;
+        }
+    
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: white;
+            padding: 18px 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whatsapp-icon img {
+            width: 90px;
+            transition: all .3s;
+        }
+
+        .whatsapp-icon:hover img{
+            width: 92px;
+        }
+
+        .serviciodebiocompatibilidad-ensayos-seccion2-servicio1-fila1{
+            height: 750px;
+        }
+
+        </style>
+    </head>
+<body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"><img class="barras" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/bars-solid.svg?_t=1696429006" alt=""></i>
+        </label>
+
+        <a href="https://ingbiomedica.uniandes.edu.co/es/" class="enlace">
+            <img class="logo" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/LOGO-IBIO-negro.png?_t=1696427168" alt="logo ing biomedica">
+        </a>
+
+        <ul>
+            <li><a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/inicio">Inicio</a></li>
+            <li><a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/ensayos">Ensayos</a></li>
+            <li><a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/nosotros">Nosotros</a></li>
+            <li><a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section>
+
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/message/2QMYSD5HS6DAL1" target="_blank">
+                <img src="https://logos-world.net/wp-content/uploads/2020/05/Logo-WhatsApp.png" alt="WhatsApp">
+            </a>
+        </div>
+    
+        <div class="serviciodebiocompatibilidad-ensayos-seccion1">
+                <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion1-banner-texto">Ensayos</p>
+        </div>
+
+        <div class="serviciodebiocompatibilidad-ensayos-seccion2">
+
+            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-titulo">SERVICIOS QUE OFRECEMOS</p>
+
+            <div class="serviciodebiocompatibilidad-ensayos-seccion2-fila">
+
+                <div class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1">
+                    <div class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1-fila1">
+                        <img alt="logo de servicio" class="serviciodebiocompatibilidad-ensayos-seccion2-imagen" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/icon-citoxicidad.png?_t=1696975279">
+                        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-titulosecundario"><br>Citotoxicidad</p><br>
+                        <img class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1-acreditacion" alt="logo de acreditacion" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/logo%20onac.png?_t=1696288291"/>
+                        <br>
+                        <p style="font-family: 'Montserrat', sans-serif; font-size: 20px;" >El ensayo de citotoxicidad evalúa 
+                            los posibles efectos nocivos en 
+                            células de mamíferos (fibroblastos de ratón L929) utilizadas para 
+                            examinar la viabilidad celular 
+                            (ensayo MTT) en presencia del 
+                            dispositivo médico, material, 
+                            fármaco, extracto natural, y aceite 
+                            esencial o el extracto de cada 
+                            material (10993-12:2021). El grado 
+                            de citotoxicidad se determina de 
+                            acuerdo con la norma ISO 
+                            10993-5:2009.
+                        </p>
+                    </div>
+                    <div class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1-fila2">
+                        <a href="https://view.genial.ly/65296ebbbba50d0010945733" target="_blank" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-boton">
+                            Conoce más
+                        </a>
+                    </div>
+                        
+                </div>
+
+                <div class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1">
+                    <div class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1-fila1">
+                        <img alt="logo de servicio" class="serviciodebiocompatibilidad-ensayos-seccion2-imagen" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/hemolisis.png?_t=1696975219">
+                        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-titulosecundario"><br>Hemólisis</p><br>
+                        <p style="font-family: 'Montserrat', sans-serif; font-size: 20px;">El ensayo de hemólisis determina 
+                            la ruptura de los glóbulos rojos 
+                            (liberación de hemoglobina) al 
+                            exponerlos al contacto directo u 
+                            extracto de un dispositivo 
+                            médicos, material, fármaco o 
+                            aceite esencial. El porcentaje de 
+                            hemólisis se determina teniendo 
+                            en cuenta la norma ISO 
+                            10993-3:2018.
+                        </p>
+                    </div>
+                    <a href="https://view.genial.ly/6529759783648c0010caeca7" target="_blank" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-boton">
+                        Conoce más
+                    </a>
+                </div>
+
+                <div class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1">
+                    <div class="serviciodebiocompatibilidad-ensayos-seccion2-servicio1-fila1">
+                        <img alt="logo de servicio" class="serviciodebiocompatibilidad-ensayos-seccion2-imagen" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/plaqueta.png?_t=1696975274">
+                        <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-titulosecundario"><br>Agregación plaquetaria</p><br>
+                        <p style="font-family: 'Montserrat', sans-serif; font-size: 20px;">El ensayo de agregación plaquetaria
+                            en plasma evalúa la activación o trombogenicidad de 
+                            acuerdo con la interacción directa o del extracto de un dispositivo 
+                            médico, material, fármaco o 
+                            aceite esencial. El porcentaje de 
+                            agregación plaquetaria se determina de acuerdo con la norma 
+                            ISO 10993-4:2018.
+                        </p>
+                    </div>
+                    <a href="https://view.genial.ly/6529759783648c0010caeca7" target="_blank" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-boton">
+                        Conoce más
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="serviciodebiocompatibilidad-ensayos-seccion3">
+
+            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-titulo">PREGUNTAS FRECUENTES</p><br>
+
+            <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla">
+
+                <input type="checkbox" id="pregunta-1">
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1" style="font-family: 'Montserrat', sans-serif">
+                    <label for="pregunta-1" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+                        ¿Cuánto es el tiempo de procesamiento del servicio?
+                    </label>
+                </div>
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-2" style="font-family: 'Montserrat', sans-serif">Quince días (15 días) hábiles después de recibidas las muestras.</div>
+
+                <input type="checkbox" id="pregunta-2">
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3" style="font-family: 'Montserrat', sans-serif">
+                    <label for="pregunta-2" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+                        ¿Cuál es el costo del ensayo?
+                    </label>
+                </div>
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4" style="font-family: 'Montserrat', sans-serif"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/tabla-precios-servicios.jpg?_t=1700061248" alt="tabla de costos"></div>
+
+                <input type="checkbox" id="pregunta-3">
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5" style="font-family: 'Montserrat', sans-serif">
+                    <label for="pregunta-3" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+                        ¿Qué son los ensayos de biocompatibilidad?
+                    </label>
+                </div>
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-6" style="font-family: 'Montserrat', sans-serif">Los ensayos de biocompatibilidad in vitro son procedimientos de laboratorio diseñados para <b>evaluar</b> la interacción de <b>materiales, dispositivos médicos, productos farmacéuticos u otros productos</b> en sistemas biológicos, como cultivos celulares. Estos ensayos pueden abordar una variedad de respuestas celulares, como la <b>citotoxicidad</b>, la irritación, la inflamación, la respuesta inmune entre otros aspectos.<br>
+
+                    <b>Ensayos de citotoxicidad:</b> Evalúan si un material o producto causa daño a las células expuestas a este. Ejemplos de células que se utilizan para este ensayo: fibroblastos de ratón L929 y células Vero.</div>
+
+                <input type="checkbox" id="pregunta-4">
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7" style="font-family: 'Montserrat', sans-serif">
+                    <label for="pregunta-4" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+                        ¿Qué significa estar acreditados por la ONAC con la ISO/IEC 17025:2017?
+                    </label>
+                </div>
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-8" style="font-family: 'Montserrat', sans-serif"><b>El Organismo Nacional de acreditación en Colombia (ONAC)</b> es el ente encargado de otorgar <b>acreditación</b> según la norma ISO/IEC 17025:2017, esto significa que un laboratorio de ensayo ha demostrado formalmente su competencia técnica y su capacidad para producir resultados de alta calidad y confiables en sus análisis, mediciones y calibraciones. La ISO/IEC 17025:2017 es una norma internacional que establece los requisitos generales para la competencia de los laboratorios y es ampliamente reconocida en todo el mundo.</div>
+
+                <input type="checkbox" id="pregunta-5">
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9" style="font-family: 'Montserrat', sans-serif">
+                    <label for="pregunta-5" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+                        ¿Los resultados del ensayo de citotoxicidad in vitro acreditados por ONAC son válidos ante otros países?
+                    </label>
+                </div>
+                <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10" style="font-family: 'Montserrat', sans-serif">ONAC tiene como objetivo garantizar que los laboratorios de ensayo cuentan con una infraestructura, estructura organizacional y personal competente, entre otros requisitos, para realizar los ensayos con calidad, entregando resultados precisos y confiables que, gracias a los acuerdos de reconocimiento multilateral de los que hace parte ONAC, podrán ser aceptados no solo a nivel nacional sino también en las más de 100 economías que hacen parte de los acuerdos de ILAC (International Laboratory Accreditation Cooperation) y IAAC (Inter-American Acreditation Cooperation).</div>
+
+            </div>
+
+            
+
+
+        </div>
+        
+        <div class="serviciodebiocompatibilidad-ensayos-seccion3">
+
+            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion4-titulo">¿QUIERES CONOCER MÁS <br> SOBRE EL ENSAYO?</p><br>
+
+            <p style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion4-texto">
+                Estamos comprometidos con la integración de nuestros servicios, ensayos de 
+                biocompatibilidad, educación y consultoría. Como parte de esta iniciativa 
+                compartimos material didáctico en forma de infografías acerca de los ensayos 
+                de biocompatibilidad y procesos de esterilización. Ofrecemos workshops virtuales sobre ensayos de citotoxicidad y hemocompatibilidad.
+            </p>
+
+            <a href="#" style="font-family: 'Montserrat', sans-serif" class="serviciodebiocompatibilidad-ensayos-seccion2-boton">
+                Próximamente
+            </a>
+
+        </div>
+
+        <footer class="serviciodebiocompatibilidad-footer">
+
+            <div class="serviciodebiocompatibilidad-footer-columna1">
+                <a href="https://ingbiomedica.uniandes.edu.co/es/"><img class="serviciodebiocompatibilidad-footer-columna1-logo" src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/LOGO-IBIO-blanco.png?_t=1696997950" alt="logo ibio"></a>
+                <br>
+                <br>
+                <p class="serviciodebiocompatibilidad-footer-texto">
+                    Universidad de los Andes | Vigilada Mineducación <br>
+                    Reconocimiento como Universidad: Decreto 1297 del 30 de mayo de 1964. <br>
+                    Reconocimiento personería jurídica: Resolución 28 del 23 de febrero de 1949 Minjusticia.
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    © - Derechos Reservados Universidad de los Andes
+                </p>
+            </div>
+
+            <div class="serviciodebiocompatibilidad-footer-columna2"></div>
+
+            <div class="serviciodebiocompatibilidad-footer-columna3">
+                <p class="serviciodebiocompatibilidad-footer-titulo">ENLACES RÁPIDOS</p>
+                <br>
+                <br>
+                <p class="serviciodebiocompatibilidad-footer-texto">
+                    <a href="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/ensayos">Ensayos</a>
+                    <br>
+                    <br>
+                    <a href="#">Laboratorios</a>
+                    <br>
+                    <br>
+                    <a href="https://ingbiomedica.uniandes.edu.co/es">Departamento de Ingeniería Biomédica</a>
+                    <br>
+                    <br>
+                    <a href="https://uniandes.edu.co/">Universidad de los Andes</a>
+                </p>
+            </div>
+
+            <div class="serviciodebiocompatibilidad-footer-columna4"></div>
+
+            <div class="serviciodebiocompatibilidad-footer-columna5">
+
+                <p class="serviciodebiocompatibilidad-footer-titulo">CONTACTO</p>
+                <br>
+                <br>
+
+                <div class="serviciodebiocompatibilidad-footer-columna5-fila">
+                    <div class="serviciodebiocompatibilidad-footer-columna5-fila-icono"><?xml version="1.0" encoding="utf-8"?> <svg version="1.1" id="Capa_1" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 81.1 79.8" style="enable-background:new 0 0 81.1 79.8;" xml:space="preserve"> <g transform="translate(0,-952.36218)"> <path d="M16.5,953.1c-2.4,0.1-4.2,1.2-5.5,2.7l-7,8c-2,2.3-2.5,5.4-2.5,8.3c0,10.1,7.1,25,20.6,38.4c13.5,13.5,28.3,20.6,38.4,20.6 c3,0,6-0.5,8.3-2.5l8-7c1.5-1.3,2.6-3.1,2.7-5.5c0-2.3-1.2-4.1-2.6-5.5l-11-11c-1.3-1.3-3.1-2.6-5.4-2.6c-2.5,0-4.2,1.4-5.4,2.6 c0,0-4.2,4.2-4.3,4.3c-0.8,0.8-1.5,0.9-2.2,0.4l-20.4-20.4c-0.7-0.7-0.1-1.4,0.3-2c0.1-0.1,4.4-4.4,4.4-4.4c1.2-1.2,2.6-3,2.6-5.4 c0-2.3-1.2-4.1-2.6-5.4l-11-11C20.6,954.2,18.8,953,16.5,953.1z M19.1,958.5l11,11c1.1,1.1,1.4,1.5,1.4,2.6c0,1.1-0.4,1.6-1.4,2.6 c0,0-4.3,4.3-4.4,4.4c-0.8,1-1.4,2-1.6,3.1c-0.2,1.7,0,3.2,1.1,4.2l21,21c1.1,1,3,1.3,4.2,1.1c1.1-0.2,2.1-0.8,3.1-1.6 c0.2-0.1,4.5-4.5,4.5-4.5c1-1,1.5-1.4,2.6-1.4c1.1,0,1.5,0.3,2.6,1.4l11,11c1,1,1.4,1.9,1.4,2.5c0,1.6-0.1,1.5-1.3,2.5l-8,7 c-1.1,0.9-3.2,1.5-5.7,1.5c-8.1,0-22.7-6.6-35.6-19.4c-12.9-12.9-19.4-27.5-19.4-35.6c0-2.5,0.6-4.6,1.5-5.7l7-8 c0.8-0.9,1.7-1.3,2.5-1.3C17.4,957,18.3,957.6,19.1,958.5z"/> </g> </svg></div>
+                    <div class="serviciodebiocompatibilidad-footer-columna5-fila-texto">
+                        <p class="serviciodebiocompatibilidad-footer-texto">
+                            +(601) 339 49 49 ext 3432
+                        </p>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="serviciodebiocompatibilidad-footer-columna5-fila">
+                    <div class="serviciodebiocompatibilidad-footer-columna5-fila-icono"><?xml version="1.0" encoding="utf-8"?> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 92.7 64.1" style="enable-background:new 0 0 92.7 64.1;" xml:space="preserve"> <style type="text/css"> st0{fill-rule:evenodd;clip-rule:evenodd;} </style> <path class="st0" d="M7.8,1.2h77c2.9,0,4.5,1.9,4.6,1.9c1.2,1.2,1.9,2.8,1.9,4.6v48.9c0,1.8-0.7,3.4-1.9,4.6c0,0-1.7,1.9-4.6,1.9 h-77c-2.9,0-4.5-1.9-4.6-1.9c-1.2-1.2-1.9-2.8-1.9-4.6V7.7c0-1.8,0.7-3.4,1.9-4.6C3.3,3.1,4.9,1.2,7.8,1.2L7.8,1.2z M87.7,6.7 L47.4,39.3c-0.7,0.5-1.6,0.5-2.2,0L5,6.7C4.9,7,4.8,7.4,4.8,7.7v48.9c0,0.8,0.3,1.6,0.9,2.1l0,0c0.6,0.5,1.3,0.9,2.1,0.9h77 c0.8,0,1.6-0.3,2.1-0.9l0,0c0.6-0.6,0.9-1.3,0.9-2.1V7.7C87.9,7.4,87.8,7,87.7,6.7L87.7,6.7z M7.9,4.7l38.4,31.1L84.7,4.7 C84.7,4.7,7.9,4.7,7.9,4.7z"/> </svg></div>
+                    <div class="serviciodebiocompatibilidad-footer-columna5-fila-texto">
+                        <p class="serviciodebiocompatibilidad-footer-texto">
+                            <a href="mailto:laboratoriosibio@uniandes.edu.co">laboratoriosibio@uniandes.edu.co</a>
+                        </p>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <p class="serviciodebiocompatibilidad-footer-titulo">SÍGUENOS</p>
+                <br>
+
+                <div class="serviciodebiocompatibilidad-footer-columna5-fila">
+                    <a href="https://www.instagram.com/uniandesibio/" target="_blank"><div class="serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/instagram-icon.png?_t=1696997950" alt="logo red social"></div></a>
+                    <a href="https://www.facebook.com/ingbiomedicauniandes/" target="_blank"><div class="serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor" id="especial"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/facebook-icon.png?_t=1696997950" alt="logo red social"></div></a>
+                    <a href="https://www.linkedin.com/company/ingenieria-biomedica-uniandes/" target="_blank"><div class="serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/linkdn-icon.png?_t=1696997950" alt="logo red social"></div></a>
+                    <a href="https://www.youtube.com/channel/UCejaquqRdimQdOL_5h56Eqw" target="_blank"><div class="serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/youtube-icon.png?_t=1696997950" alt="logo red social"></div></a>
+                    <a href="https://wa.me/message/2QMYSD5HS6DAL1" target="_blank"><div class="serviciodebiocompatibilidad-footer-columna5-fila-logo-contenedor"><img src="https://ingbiomedica.uniandes.edu.co/sites/default/files/servicios-de-biocompatibilidad/whatsapp-icon.png?_t=1696997950" alt="logo red social"></div></a>
+                </div>
+
+
+            </div>
+
+        </footer> 
+
+    </section>
+
+</body>
+</html>

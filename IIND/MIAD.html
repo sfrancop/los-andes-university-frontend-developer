@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla {
+      width: 100%;
+      margin: auto;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla * {
+      text-wrap: pretty;
+      font-size: 14px;
+    }
+
+    #pregunta-1 {
+      display: none;
+    }
+
+    #pregunta-2 {
+      display: none;
+    }
+
+    #pregunta-3 {
+      display: none;
+    }
+
+    #pregunta-4 {
+      display: none;
+    }
+
+    #pregunta-5 {
+      display: none;
+    }
+
+    #pregunta-6 {
+      display: none;
+    }
+
+    #pregunta-7 {
+      display: none;
+    }
+
+    #pregunta-8{
+      display: none;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label {
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      padding-right: 40px;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label:hover {
+      text-decoration: underline;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-11,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-13,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-15 {
+      margin: 10px 0;
+      padding: 20px 0 20px 10px;
+      background-color: #EEEEEE;
+      border: solid 1px rgb(175, 175, 175);
+      border-radius: 8px;
+      transition: background-color .6s;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 60px;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-2 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+    }
+
+    #pregunta-1:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-2 {
+      display: block;
+    }
+
+    #pregunta-1:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+    }
+
+    #pregunta-2:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4 {
+      display: block;
+    }
+
+    #pregunta-2:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-6 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+
+    }
+
+    #pregunta-3:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-6 {
+      display: block;
+    }
+
+    #pregunta-3:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-8 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+
+    }
+
+
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+    }
+
+
+
+
+
+    #pregunta-4:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-8 {
+      display: block;
+    }
+
+    #pregunta-4:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10 {
+      padding: 2rem;
+      display: none;
+
+    }
+
+    #pregunta-5:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10 {
+      display: block;
+    }
+
+    #pregunta-5:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-12 {
+      padding: 2rem;
+      border-bottom: 2px black solid;
+      display: none;
+    }
+
+    #pregunta-6:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-12 {
+      display: block;
+    }
+
+    #pregunta-6:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-11 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+
+
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-14,
+    .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-16 {
+      padding: 2rem;
+      display: none;
+    }
+
+    #pregunta-7:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-14 {
+      display: block;
+    }
+
+    #pregunta-7:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-13 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+    #pregunta-8:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-16 {
+      display: block;
+    }
+
+    #pregunta-8:checked~.serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-15 {
+      border: 0;
+      background-color: #810FB5;
+      color: white;
+    }
+
+    li:not(.no-space) {
+      margin-bottom: 20px;
+    }
+
+    ol ul {
+      margin-left: 20px;
+    }
+
+    #flecha-1,
+    #flecha-2,
+    #flecha-3,
+    #flecha-4,
+    #flecha-5,
+    #flecha-6,
+    #flecha-7,
+    #flecha-8{
+      transition: transform .6s;
+    }
+
+    #pregunta-1:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1  #flecha-1,
+    #pregunta-2:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3  #flecha-2,
+    #pregunta-3:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5  #flecha-3,
+    #pregunta-4:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7  #flecha-4,
+    #pregunta-5:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9  #flecha-5,
+    #pregunta-6:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-11 #flecha-6,
+    #pregunta-7:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-13 #flecha-7,
+    #pregunta-8:checked + .serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-15 #flecha-8{
+      transform: rotate(180deg);
+    }
+
+
+  </style>
+</head>
+<body>
+  <p class="rtecenter"><span style="font-size:30px;"><strong>Admisiones</strong></span></p>
+
+  <p>Este programa ha sido diseñado para profesionales, no necesariamente de áreas STEM (ciencias, tecnología, ingeniería y matemáticas, por sus siglas en inglés), con conocimientos en programación y estadística, quienes serán formados para atender aquellas preguntas del negocio que requieren del análisis de un alto volumen de datos y el manejo de su complejidad para apoyar los procesos de toma de decisiones, la creación de ventajas competitivas y la generación de valor.</p>
+  
+  <p>Este programa es ideal para profesionales que:</p>
+  
+  <ul role="list">
+    <li class="no-space">Sean egresados de áreas cuantitativas como ingeniería, economía, matemáticas, entre otras.</li>
+    <li class="no-space">Sean egresados de otras disciplinas y tengan experiencia certificada en análisis de datos y/o manejo de información o de grandes bases de datos.</li>
+    <li class="no-space">Estén interesados y motivados por aplicar técnicas avanzadas de ingeniería para dar soporte a la toma de decisiones en las organizaciones.</li>
+    <li>Estén motivados a asumir los procesos de enseñanza y aprendizaje a través de medios virtuales.</li>
+  </ul>
+
+  <p>Si está interesado en obtener información del programa, invitaciones a Webinars, foros o charlas informativas, déjenos sus <a style="color:#800080;" href="https://www.coursera.org/degrees/maestria-analitica-de-datos-uniandes">datos</a>. Si tiene alguna inquietud adicional, escríbanos a: <a style="color:#800080;" href="mailto:coordinadoranalytics@uniandes.edu.co">coordinadoranalytics@uniandes.edu.co</a></p>
+  
+  <div class="serviciodebiocompatibilidad-ensayos-seccion3">
+
+    <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla">
+
+      <!-- Acordeon 1 -->
+      <input type="checkbox" id="pregunta-1"> 
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-1">
+        <label for="pregunta-1" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">¿A quién está dirigido MIAD?</p> <svg id="flecha-1" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-2">
+        <p id="este-programa-estar-dirigido-a-personas-con-ttulo-profesional-interesadas-en">El programa de Maestría en Inteligencia Analítica de Datos (MIAD) está dirigido a personas con título profesional en:</p>
+  
+        <ul>
+          <li class="no-space">Liderar proyectos de inteligencia analítica de alto impacto en las organizaciones.</li>
+          <li class="no-space">Construir modelos matemáticos descriptivos, predictivos, y prescriptivos para la toma de decisiones.</li>
+          <li class="no-space">Extraer, transformar y cargar datos de fuentes estructuradas y no estructuradas con tecnologías para el manejo de grandes volúmenes de datos y cloud computing.</li>
+          <li class="no-space">Aprender de herramientas tecnológicas como lenguajes computacionales, librerías para analytics, manejo de bases de datos y servidores.</li>
+          <li>Analizar, sintetizar y presentar de forma efectiva los resultados de los modelos analíticos con técnicas de visualización y storytelling.</li>
+        </ul>
+
+        <p><b>Los candidatos/aspirantes al programa deben tener un nivel intermedio de compresión de lectura en inglés (gran parte del material teórico del programa se comparte en este idioma).</b></p>
+
+      </div>
+
+      <!-- Acordeon 2 -->
+      <input type="checkbox" id="pregunta-2">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-3">
+        <label for="pregunta-2" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Ingreso a cursos de MIAD a través de Educación Continua</p> <svg id="flecha-2" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-4">
+        <h2>PROGRAMA CERTIFICADO MASTER TRACK</h2>
+        
+        <p>Si usted se encuentra interesado en iniciar su formación tomando cursos de la maestría MIAD, puede hacerlo inscribiéndose directamente y sin procesos de admisión al programa <a href="https://www.coursera.org/mastertrack/analitica-datos-visualizacion-prediccion-toma-decisiones-uniandes" style="color:#800080;">Certificado MasterTrack® Analítica de Datos: visualización, predicción y toma de decisiones</a>, el cual es equivalente al segundo semestre de la Maestría en Inteligencia Analítica de Datos. Si aprueba el MasterTrack con un promedio de 4.0 sobre 5.0, será eximido del examen de conocimientos y podrá continuar con su proceso de admisión formal al programa MIAD (más detalles consultar la siguiente sección).</p>
+
+        <p>Los cursos que se cubren bajo este programa son:</p>
+
+        <ul style="padding-left: 1rem;">
+          <li class="no-space">Visualización y storytelling</li>
+          <li class="no-space">Introducción al Machine Learning</li>
+          <li class="no-space">Machine Learning y Procesamiento del Lenguaje Natural</li>
+          <li class="no-space">Optimización para la Toma de Decisiones</li>
+        </ul>
+
+        <p>Si desea homologar los cursos vistos por Educación Continua una vez usted sea admitido al programa de maestría MIAD, se requiere que la nota final individual de cada curso sea superior a 3.00 y que el total de créditos a homologar no sea superior a 16.</p>
+
+      </div>
+
+      <!-- Acordeon 3 -->
+      <input type="checkbox" id="pregunta-3">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-5">
+        <label for="pregunta-3" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Ingreso formal al programa MIAD – Dirección de Admisiones </p> <svg id="flecha-3" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-6">
+
+        <h2>ADMISIONES 2024-14</h2>
+        <h2>INICIO DE INSCRIPCIONES: 29 de enero de 2024</h2>
+        <ol style="margin-left: 1rem;" type="a">
+          <li style="font-weight: bold;" class="no-space">Crear nombre de usuario y diligenciar completamente el formulario para la solicitud de admisión en <a style="color:#800080;" href="https://mibanner.uniandes.edu.co/PROD/bwskwalog.P_DispLoginNon">este</a> enlace. En el formulario de admisión, MIAD VIRTUAL aparecerá dentro de la categoría denominada "Admisión Maestría Virtual".</li>
+          <li style="font-weight: bold;" class="no-space">Preparar y cargar los siguientes documentos requisito del proceso de admisión del programa, en <a style="color:#800080;" href="https://registroapps.uniandes.edu.co/SisAdmisiones/Documentos/">este</a> enlace</li>
+          <ul style="list-style-type:circle;margin-left: 1rem; font-weight: bold;">
+            <li style="font-weight: bold;" class="no-space">Acta o diploma de pregrado, es decir, soporte del título profesional. No se aceptan certificados de terminación de estudios o de candidatura a grado</li>
+            <li style="font-weight: bold;" class="no-space">Certificado oficial de notas o calificaciones de pregrado. Los egresados UniAndinos pueden descargar el registro de notas que genera el sistema Banner en impresión pdf. No se aceptan capturas de pantalla editadas o ediciones realizadas por el aspirante.</li>
+            <li style="font-weight: bold;" class="no-space">Hoja de vida actualizada en donde se evidencie mínimo dos (2) años de experiencia laboral, idealmente en análisis de datos y/o manejo de información o de grandes bases de datos. El Comité interno de admisión se reserva el derecho de pedir documentación adicional de soporte de la hoja de vida, como por ejemplo certificados laborales</li>
+            <li style="font-weight: bold;" class="no-space">Fotografía reciente</li>
+            <li style="font-weight: bold;" class="no-space">Copia de la cédula o documento de identidad</li>
+            <li style="font-weight: bold;" class="no-space">Video de motivación (máx. 2 minutos de duración) en el que se incluya:</li>
+            <ul style="margin-left: 1rem; font-weight: normal;">
+              <li class="no-space">Perfil profesional y personal del aspirante, incluyendo programas de estudios culminados, experiencia laboral, cargos y habilidades relacionadas con analítica de datos.</li>
+              <li class="no-space">Motivación para estudiar la Maestría en Inteligencia Analítica de Datos (MIAD, Virtual, Coursera) y sus razones para profundizar en la aplicación de Analytics.</li>
+              <li>Cualidades y habilidades particulares en el análisis de datos, que soporten su selección para hacer parte del programa académico.</li>
+            </ul>
+          </ul>
+          <p>Para más detales sobre la documentación y requisitos generales consulte <a style="color:#800080;" href="https://registroapps.uniandes.edu.co/SisAdmisiones/Posgrado/#documentos">este</a> enlace.</p>
+          <h2>RECOMENDACIONES PARA TODO DOCUMENTO</h2>
+          <ul>
+            <li class="no-space">Solo se aceptan documentos legibles con información completa del aspirante y de la entidad que los emite.</li>
+            <li class="no-space">Si el documento se emite en el extranjero, no se requiere que sea apostillado. En caso de que el documento sea expedido en un idioma diferente al español, debe venir acompañado de una traducción oficial.</li>
+            <li>El documento con firma digital debe poder ser validado en el momento de la revisión por parte de la Dirección de Admisiones. En caso de que cargue un documento que no cuente con firma digital y sea admitido, la Universidad de los Andes lo validará con la universidad que lo emite. Si la universidad de origen no ofrece el servicio de validación o no es posible realizar la verificación, se solicitará la entrega del documento original durante el primer semestre de estudio. En cualquier escenario, se recomienda contar con el documento original para poder entregar una copia autenticada de manera física en caso de que sea solicitado.</li>
+          </ul>
+          <li style="font-weight: bold;">Preparar y presentar el examen específico de conocimientos del programa. Examen de conocimientos generales en Probabilidad, Estadística y Análisis de Datos.  Este examen es obligatorio para todos los interesados en ser admitidos a MIAD. Puede ampliar información más adelante.</li>
+          <li style="font-weight: bold;">
+            <p>Consultar el resultado del proceso de admisión en el <a style="color:#800080;" href="https://industrial.uniandes.edu.co/es/programa-academico/maestria-en-inteligencia-analitica-de-datos-MIAD">este</a> enlace</p>
+            <p>Los resultados del proceso de admisión serán enviados al correo electrónico que usted registre como principal en el formulario de admisión. Si es admitido, también recibirá un correo oficial de la Universidad indicándole el proceso a seguir. El recibo de <a style="color:#800080;" href="https://matriculas.uniandes.edu.co/">matricula</a> estará disponible para pago electrónico antes del inicio de clases. Nota: Le recomendamos revisar la carpeta de spam.</p>
+          </li>
+
+        </ol>
+
+      </div>
+
+      <!-- Acordeon 4 -->
+      <input type="checkbox" id="pregunta-4">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-7">
+        <label for="pregunta-4" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Fechas para Inscripción y Admisión a MIAD</p> <svg id="flecha-4" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-8">
+
+        <p>Para inscripción y admisión a MIAD se han definido dos (2) cohortes anuales: una para iniciar en el primer semestre del año y otra para iniciar en el segundo semestre del año. Las inscripciones para iniciar clases en agosto de 2024 se abren a partir del <b>29 de enero de 2024</b>.</p>
+        
+        <p>Usted puede completar su proceso de solicitud de admisión hasta el <b>19 de junio de 2024</b>.</p>
+
+        <p>La fecha de inicio de clases es el <b>5 de agosto de 2024</b>.</p>
+
+        <p>Aspirante, tenga en cuenta que:</p>
+
+        <ul style="font-weight: bold;">
+          <li class="no-space">Las inscripciones se abren a partir del 29 de enero de 2024.</li>
+          <li class="no-space">La fecha de inicio de clases es el 5 de agosto de 2024.</li>
+          <li class="no-space">Este semestre se tienen varios cortes de admisión. En cada uno de ellos se realizará la evaluación de los aspirantes al programa que, hasta la fecha del corte, hayan completado en su totalidad el cargue de documentos y los requisitos de admisión.</li>
+          <li class="no-space">Si se encuentra interesado en obtener el resultado del proceso de admisión en alguna fecha particular, no olvide identificar cuándo debe presentar el examen de conocimientos, así como el plazo límite para cargar los documentos en la plataforma de la Dirección de Admisiones.</li>
+          <li class="no-space">Para más detalles sobre el proceso de inscripción a <a style="color:#800080;" href="https://registroapps.uniandes.edu.co/SisAdmisiones/Posgrado/">posgrados Uniandes</a></li>
+        </ul>
+
+        <h2>RECOMENDACIONES PARA TODO DOCUMENTO</h2>
+
+        <ul>
+          <li class="no-space">Solo se aceptan documentos legibles con información completa del aspirante y de la entidad que los emite.</li>
+          <li class="no-space">Si el documento se emite en el extranjero, no se requiere que sea apostillado. En caso de que el documento sea expedido en un idioma diferente al español, debe venir acompañado de una traducción oficial.</li>
+          <li>El documento con firma digital debe poder ser validado en el momento de la revisión por parte de la Dirección de Admisiones. En caso de que cargue un documento que no cuente con firma digital y sea admitido, la Universidad de los Andes lo validará con la universidad que lo emite. Si la universidad de origen no ofrece el servicio de validación o no es posible realizar la verificación, se solicitará la entrega del documento original durante el primer semestre de estudio. En cualquier escenario, se recomienda contar con el documento original para poder entregar una copia autenticada de manera física en caso de que sea solicitado.</li>
+        </ul>
+
+        <p><b>a.	Primer estudio de admisión – MIAD</b></p>
+
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+        border-radius: 8px; will-change: transform;"><iframe allow="fullscreen" allowfullscreen="allowfullscreen" loading="lazy" src="https://www.canva.com/design/DAE3CmjLNWE/view?embed" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"></iframe></div>
+       
+       <p><b>b.	Segundo estudio de admisión – MIAD</b></p>
+
+       <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+        border-radius: 8px; will-change: transform;"><iframe allow="fullscreen" allowfullscreen="allowfullscreen" loading="lazy" src="https://www.canva.com/design/DAE3CmjLNWE/view?embed" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"></iframe></div>
+       
+       <p><b>c. Tercer estudio de admisión – MIAD</b></p>
+
+       <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+        border-radius: 8px; will-change: transform;"><iframe allow="fullscreen" allowfullscreen="allowfullscreen" loading="lazy" src="https://www.canva.com/design/DAE3Cp8uYSg/view?embed" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"></iframe></div>
+       <!--
+       <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+        border-radius: 8px; will-change: transform;"><iframe allow="fullscreen" allowfullscreen="allowfullscreen" loading="lazy" src="https://www.canva.com/design/DAFlENoPUjk/view?embed" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"></iframe></div>
+       
+       -->
+
+      </div>
+
+      <!-- Acordeon 5 -->
+      <input type="checkbox" id="pregunta-5">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-9">
+        <label for="pregunta-5" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Información acerca del examen específico de conocimiento del programa MIAD</p> <svg id="flecha-5" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-10">
+        <p>Todos los aspirantes interesados en ser admitidos en el programa MIAD deben presentar obligatoriamente el examen específico de conocimientos del programa. Las temáticas del examen están relacionadas con conocimientos generales en probabilidad, estadística, análisis de datos, programación en Python y/o R, análisis gráfico y fundamentación matemática.  </p>
+        <p>Recuerde que:</p>
+        <ul style="padding: 0; margin-left: 1rem;">
+          <li class="no-space">Este examen es uno de los criterios indispensables para el proceso de admisión</li>
+          <li class="no-space">Este examen no tiene costo</li>
+          <li class="no-space">El examen se realizará de manera virtual</li>
+          <li class="no-space">No olvide revisar con precisión las fechas en las cuales se realiza el examen</li>
+          <li class="no-space">Si desea prepararse para el examen puede hacerlo a través de los siguientes MOOCs gratuitos disponibles en la plataforma de Coursera:</li>
+          <ul>
+            <li class="no-space"><a style="color:#800080;" href="https://www.coursera.org/learn/probabilidad">Fundamentos de probabilidad y aplicaciones</a></li>
+            <li class="no-space"><a style="color:#800080;" href="https://www.coursera.org/learn/estadistica-aplicada-fundamentos ">Fundamentos de estadística aplicada</a></li>
+            <li class="no-space"><a style="color:#800080;" href="https://www.coursera.org/learn/programacion-python">Programación en Python</a></li>
+            <li><a style="color:#800080;" href="https://www.coursera.org/learn/analytics-analisis-datos">Analytics en las organizaciones</a></li>
+          </ul>
+        </ul>
+
+      </div>
+
+      <input type="checkbox" id="pregunta-8">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-15">
+        <label for="pregunta-8" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Beneficios para Egresados Uniandinos</p> <svg id="flecha-8" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-16">
+
+          <p><span style="color:#800080;"><strong>BENEFICIOS PARA EGRESADOS UNIANDINOS INGENIEROS INDUSTRIALES - EXENTO DE EXAMEN ESPECIFICO DE CONOCIMIENTOS</strong>&nbsp;&nbsp;</span></p>
+
+          <p>El Departamento de Ingeniería Industrial de la Universidad de los Andes otorga un reconocimiento a sus egresados del pregrado en Ingeniería Industrial que se hayan graduado entre los cinco (5) años anteriores al ingreso al posgrado. Si usted cumple con este requisito, estará exento de la presentación del examen específico de conocimientos del programa MIAD. Sin embargo, es indispensable que usted diligencie el formulario de admisión y haga el cargue de la documentación completa en la Dirección de Admisiones antes de la fecha de cierre. Si tiene algún inconveniente o duda con este proceso por favor comuníquese con el Departamento de Ingeniería Industrial al correo <a
+            style="color:#800080;"
+            href="mailto:d.torresh@uniandes.edu.co">d.torresh@uniandes.edu.co</a></p>
+  
+
+      </div>
+
+      <!-- Acordeon 6 -->
+      <input type="checkbox" id="pregunta-6">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-11">
+        <label for="pregunta-6" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Una vez sea admitido a MIAD</p> <svg id="flecha-6" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-12">
+
+        <h2>A TENER EN CUENTA</h2>
+
+        <p>Es muy importante que revise La “Guía de Bienvenida para estudiantes de posgrados Virtuales”, pues allí encontrará información relacionada con los requerimientos mínimos tecnológicos y ampliación sobre los pasos a seguir en esta etapa de su proceso.</p>
+
+        <p>Importante: Revise la velocidad de su internet para acceder a las actividades en la plataforma: lo recomendable es un mínimo de 500 kilobytes por segundo de ancho de banda. También le sugerimos usar micrófono y audífonos durante sus clases sincrónicas.</p>
+
+        <p><a style="color:#800080;" href="https://industrial.uniandes.edu.co/sites/default/files/Programas/MIAD/Gu%C3%ADaAdmitidosProgramasVirtuales.pdf">Guía de Bienvenida para Estudiantes de Posgrados Virtuales</a></p>
+
+        <p>¡Bienvenido a Uniandes!</p>
+
+      </div>
+
+      <!-- Acordeon 7 -->
+      <input type="checkbox" id="pregunta-7">
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-13">
+        <label for="pregunta-7" class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-label">
+          <p style="width: 45ch; margin: 0; padding: 0;">Cuenta Uniandes</p> <svg id="flecha-7" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+        </label>
+      </div>
+      <div class="serviciodebiocompatibilidad-ensayos-seccion3-tabla-fila-14">
+        <p>Los aspirantes admitidos que nunca hayan estado vinculados a la Universidad, recibirán el correo de
+          activación de Cuenta Uniandes una vez se hayan procesado las admisiones en nuestros sistemas de información.
+          Una vez activada la cuenta de correo Uniandes, usted podrá realizar los diferentes procesos que aplican para
+          los estudiantes de primer semestre de posgrado.</p>
+        
+        <p>Puede consultar estos procesos en el siguiente enlace: <a style="color:#800080;"
+            href="https://registro.uniandes.edu.co/index.php/posgrados/guia-de-ingreso-estudiante-nuevo">guía del
+            estudiante de primer semestre</a>.</p>
+
+      </div>
+
+
+    </div>
+
+</body>
+</html>
