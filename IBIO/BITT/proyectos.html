@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        .persona {
+            margin: 0 0 0px;
+        }
+
+        #nuestro-azul {
+            color: #14908f;
+        }
+
+        /* Style the tab */
+        #tab {
+            border-radius: 5px 5px 10px 10px;
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 30%;
+            height: auto;
+            padding-right: 0px;
+            padding-left: 0px;
+            box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        }
+
+        p {
+            word-break: normal;
+        }
+
+        /* Style the buttons inside the tab */
+        #tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        #tab button:hover {
+            background-color: #14908f;
+        }
+
+        /* Create an active/current "tab button" class */
+        #tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 100%;
+            border: none;
+            height: auto;
+            word-break: break-all;
+            e hyphens: auto;
+
+        }
+
+        figure {
+            display: inline;
+        }
+
+        @media (max-width: 765px) {
+            #tab {
+                float: left;
+                border: 1px solid #ccc;
+                background-color: #f1f1f1;
+                width: 100%;
+                height: auto;
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+
+        }
+    </style>
+
+    <div class="row rtejustify">
+        <div class="col-sm-4 pr0" data-wow-duration="1000ms" data-wow-delay="0ms" id="tab">
+
+            <button class="tablinks" onclick="openCity(event, 'ART/Novus')" id="defaultOpen">
+                <figure"><img class="-tab" style="width:30px;height:30px;"
+                        src="/sites/default/files/grupos-de-investigacion/icono-sinfondo-mesa-de-trabajo.png"
+                        alt="icono"> </figure>ART/Novus
+            </button>
+
+            <button class="tablinks" onclick="openCity(event, 'EVA')">
+                <figure"><img class="icono-tab" style="width:30px;height:30px;"
+                        src="/sites/default/files/grupos-de-investigacion/icono-sinfondo-mesa-de-trabajo.png"
+                        alt="icono"> </figure>EVA
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'IUCare')">
+                <figure"><img class="icono-tab" style="width:30px;height:30px;"
+                        src="/sites/default/files/grupos-de-investigacion/icono-sinfondo-mesa-de-trabajo.png"
+                        alt="icono"> </figure>IUCare
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'AmnioSafe')">
+                <figure"><img class="icono-tab" style="width:30px;height:30px;"
+                        src="/sites/default/files/grupos-de-investigacion/icono-sinfondo-mesa-de-trabajo.png"
+                        alt="icono"> </figure>AmnioSafe
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'AliviEye')">
+                <figure"><img class="icono-tab" style="width:30px;height:30px;"
+                        src="/sites/default/files/grupos-de-investigacion/icono-sinfondo-mesa-de-trabajo.png"
+                        alt="icono"> </figure>AliviEye
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Hem')">
+                <figure"><img class="icono-tab" style="width:30px;height:30px;"
+                        src="/sites/default/files/grupos-de-investigacion/icono-sinfondo-mesa-de-trabajo.png"
+                        alt="icono"> </figure>Hem
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'BabyShell')">
+                <figure"><img class="icono-tab" style="width:30px;height:30px;"
+                        src="/sites/default/files/grupos-de-investigacion/icono-sinfondo-mesa-de-trabajo.png"
+                        alt="icono"> </figure>BabyShell
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Espeletia Mimicry')">
+                <figure"><img class="icono-tab" style="width:30px;height:30px;"
+                        src="/sites/default/files/grupos-de-investigacion/icono-sinfondo-mesa-de-trabajo.png"
+                        alt="icono"> </figure>Espeletia Mimicry
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Colaboración con BSCI')">
+                <figure"><img class="icono-tab" style="width:30px;height:30px;"
+                        src="/sites/default/files/grupos-de-investigacion/icono-sinfondo-mesa-de-trabajo.png"
+                        alt="icono"> </figure>Colaboración con BSCI
+            </button>
+        </div>
+        <div class="col-sm-8 pr0">
+            <div data-wow-delay="0ms" id="ART/Novus" class="tabcontent">
+                Guante personalizado para alivianar los temblores de parkinson.
+            </div>
+
+
+            <div data-wow-delay="0ms" id="EVA" class="tabcontent">
+                Pruebas diagnósticas para infecciones vaginales.
+            </div>
+
+
+            <div data-wow-delay="0ms" id="IUCare" class="tabcontent">
+                Dispositivo anestésico para la inserción del DIU.
+            </div>
+
+            <div data-wow-delay="0ms" id="AmnioSafe" class="tabcontent">
+                Detección oportuna de fugas de líquido amniótico.
+            </div>
+
+            <div data-wow-delay="0ms" id="AliviEye" class="tabcontent">
+                Dispositivo de compresión mecánica para tratar el ojo seco.
+            </div>
+
+            <div data-wow-delay="0ms" id="Hem" class="tabcontent">
+                Pruebas diagnósticas para telesalud.
+            </div>
+
+            <div data-wow-delay="0ms" id="BabyShell" class="tabcontent">
+                Cargador protector para neonatos en sistemas de transporte público.
+            </div>
+
+            <div data-wow-delay="0ms" id="Espeletia Mimicry" class="tabcontent">
+                Diseño inspirado en los frailejones para tratar quemaduras severas.
+            </div>
+
+            <div data-wow-delay="0ms" id="Colaboración con BSCI" class="tabcontent">
+                Hablar con los de BSCI.
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>

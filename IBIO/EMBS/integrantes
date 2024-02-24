@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="row" style="margin-top: 3rem;">
+        <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="text-align:center; height: 200px; width: 200px; background-color: #56c1e8; border-radius: 50%; background-image: url(''); background-size: cover; background-position: center;"></div>
+            <hr style="width: 50%;border: 0.5px solid #56c1e8;" />
+            <div style="text-align: center;">
+                <p style="font-family: lucida sans unicode,lucida grande,sans-serif;font-size: 30px;color: #0aa2a5;">
+                    <strong>Johann F. Osma</strong></p>
+                <span class="text-muted" style="font-family:georgia,serif;font-size:18px;">
+                    Profesor consejero</span>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="text-align:center; height: 200px; width: 200px; background-color: #56c1e8; border-radius: 50%; background-image: url('/sites/default/files/investigacion/grupos-de-afinidad/embs/miembros/Nontoa_Oscar_Vertical_Presidente.JPG?_t=1708779806'); background-size: cover; background-position: center;"></div>
+            <hr style="width: 50%;border: 0.5px solid #56c1e8;" />
+            <div style="text-align: center;">
+                <p style="font-family: lucida sans unicode,lucida grande,sans-serif;font-size: 30px;color: #0aa2a5;">
+                    <strong>Oscar Nontoa</strong>
+                </p>
+                <span class="text-muted" style="font-family:georgia,serif;font-size:18px;">Presidente, pregrado en Ingeniería Biomédica y Microbiología </span>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="text-align:center; height: 200px; width: 200px; background-color: #56c1e8; border-radius: 50%; background-image: url('/sites/default/files/investigacion/grupos-de-afinidad/embs/miembros/Pe%C3%B1a_Reyden_Vertical_Vicepresidente.JPG?_t=1708779821'); background-size: cover; background-position: center;"></div>
+            <hr style="width: 50%;border: 0.5px solid #56c1e8;" />
+            <div style="text-align: center;">
+                <p style="font-family: lucida sans unicode,lucida grande,sans-serif;font-size: 30px;color: #0aa2a5;">
+                    <strong>Reyden Peña</strong>
+                </p>
+                <span class="text-muted" style="font-family:georgia,serif;font-size:18px;">Vicepresidente, pregrado en Ingeniería Electrónica e Ingeniería Biomédica </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" style="margin-top: 3rem;">
+        <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="text-align:center; height: 200px; width: 200px; background-color: #56c1e8; border-radius: 50%; background-image: url('/sites/default/files/investigacion/grupos-de-afinidad/embs/miembros/Hoyos_MariaAlejandra_Vertical_Community1.JPG?_t=1708779913'); background-size: cover; background-position: center;"></div>
+            <hr style="width: 50%;border: 0.5px solid #56c1e8;" />
+            <div style="text-align: center;">
+                <p style="font-family: lucida sans unicode,lucida grande,sans-serif;font-size: 30px;color: #0aa2a5;">
+                    <strong>María Alejandra Hoyos</strong>
+                </p>
+                <span class="text-muted" style="font-family:georgia,serif;font-size:18px;">Community manager, Maestría en Ingeniería Biomédica </span>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="text-align:center; height: 200px; width: 200px; background-color: #56c1e8; border-radius: 50%; background-image: url('/sites/default/files/investigacion/grupos-de-afinidad/embs/miembros/Zambrano_Julian_Vertical_Community2.JPG?_t=1708779868'); background-size: cover; background-position: center;"></div>
+            <hr style="width: 50%;border: 0.5px solid #56c1e8;" />
+            <div style="text-align: center;">
+                <p style="font-family: lucida sans unicode,lucida grande,sans-serif;font-size: 30px;color: #0aa2a5;">
+                    <strong>Julián Zambrano</strong>
+                </p>
+                <span class="text-muted" style="font-family:georgia,serif;font-size:18px;">Community manager, pregrado en Lenguas y Cultura, y Estudios Globales </span>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="text-align:center; height: 200px; width: 200px; background-color: #56c1e8; border-radius: 50%; background-image: url('/sites/default/files/investigacion/grupos-de-afinidad/embs/miembros/Prado_Ailin_Vertical_ConGafas_RelacionesPublicas.JPG?_t=1708779848'); background-size: cover; background-position: center;"></div>
+            <hr style="width: 50%;border: 0.5px solid #56c1e8;" />
+            <div style="text-align: center;">
+                <p style="font-family: lucida sans unicode,lucida grande,sans-serif;font-size: 30px;color: #0aa2a5;">
+                    <strong>Ailin Prado</strong>
+                </p>
+                <span class="text-muted" style="font-family:georgia,serif;font-size:18px;">
+                    Directora de relaciones públicas, pregrado en Ingeniería Electrónica e Ingeniería Biomédica 
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 3rem;">
+        <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="text-align:center; height: 200px; width: 200px; background-color: #56c1e8; border-radius: 50%; background-image: url('/sites/default/files/investigacion/grupos-de-afinidad/embs/miembros/Peñaranda_Angelith_TalentoHumano_EMBS.JPG?_t=1708779837'); background-size: cover; background-position: center;"></div>
+            <hr style="width: 50%;border: 0.5px solid #56c1e8;" />
+            <div style="text-align: center;">
+                <p style="font-family: lucida sans unicode,lucida grande,sans-serif;font-size: 30px;color: #0aa2a5;">
+                    <strong>Angelith Peñaranda</strong>
+                </p>
+                <span class="text-muted" style="font-family:georgia,serif;font-size:18px;">Directora de talento humano, pregrado en Ingeniería Biomédica </span>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">&nbsp;</div>
+
+        <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="text-align:center; height: 200px; width: 200px; background-color: #56c1e8; border-radius: 50%; background-image: url('/sites/default/files/investigacion/grupos-de-afinidad/embs/miembros/González_David_Vertical_Tesorero.JPG?_t=1708779892'); background-size: cover; background-position: center;"></div>
+            <hr style="width: 50%;border: 0.5px solid #56c1e8;" />
+            <div style="text-align: center;">
+                <p style="font-family: lucida sans unicode,lucida grande,sans-serif;font-size: 30px;color: #0aa2a5;">
+                    <strong>David González</strong>
+                </p>
+                <span class="text-muted" style="font-family:georgia,serif;font-size:18px;"> Tesorero, pregrado en Ingeniería Biomédica e Ingeniería de Alimentos </span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
